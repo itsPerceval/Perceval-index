@@ -80,7 +80,7 @@ for (var i = 0; i < ideologies.length; i++) {
 percentages[i] = {percentage: 0, name: "idk"};
 percentages[i].name = ideologies[i].name;
 percentages[i].percentage = 1-(Math.abs(ideologies[i].polfree-ideology.polfree)+Math.abs(ideologies[i].ecofree-ideology.ecofree)+Math.abs(ideologies[i].socfree-ideology.socfree)+Math.abs(ideologies[i].inter-ideology.inter))/400;
-percentages.sort(function(a, b){return parseFloat(a.percentage) - parseFloat(b.percentage)});
+percentages.sort(function(a, b){return a.percentage - pb.percentage});
 }
 return percentages;
 }
