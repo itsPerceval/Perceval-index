@@ -13,9 +13,21 @@ h1 {
 </style>
 </head>
 <body>
-<h1>Answer these questions.</h1>
-<div>
-    <p>How are you?</p>
-</div>
+	<h1>Answer these questions.</h1>
+	<form action="/action_page.php">
+	<p>1. What is your ideal government size?</p>
+	<input type="radio" id="maximum size" name="govsize" value="maximum size">
+	<label for="maximum size">Maximum size</label><br>
+	<input type="radio" id="rather large" name="govsize" value="Rather large">
+	<label for="rather large">Rather large</label><br>
+	<input type="radio" id="preferably small" name="govsize" value="Preferably small">
+	<label for="preferably small">Preferably small</label><br>
+	<input type="radio" id="minimum size" name="govsize" value="Minimum size">
+	<label for="minimum size">Minimum size</label><br>
+	<input type="radio" id="no government" name="govsize" value="No government">
+	<label for="no government">No government</label><br>
+	<br>
+  <input type="submit" value="Submit">
+</form>
 </body>
 </html>
