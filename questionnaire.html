@@ -73,13 +73,19 @@
     color: white;
     width: 100px;
     padding: 20px 20px;
+    text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 20px;
     cursor: pointer;
     border-radius: 12px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    justify-content: center;
+    top: 50%;
     }
+    .wrapper {
+    text-align: center;
+}
 h1 {
 	color: white;
  	text-align: center;
@@ -90,6 +96,7 @@ h1 {
 </head>
 <body>
 	<h1>Answer these questions.</h1>
+    <div class="wrapper">
 	<form action="/action_page.php">
 	<h2>1. What is your ideal government size?</h2>
 	
@@ -117,5 +124,6 @@ h1 {
 	<br>
   <input class="button" type="submit" value="Submit">
 </form>
+</div>
 </body>
 </html>
