@@ -17,23 +17,79 @@ function ideology(){
     var ideology = {polfree: 0, ecofree: 0, socfree: 0, inter: 0};
 
 if (getUrlVars()["size"] === "size1") {
-  ideology.polfree = ideology.polfree + 0
+  ideology.polfree = ideology.socfree + 0;
 }
 if (getUrlVars()["size"] === "size2") {
-  ideology.polfree = ideology.polfree + 25
+  ideology.polfree = ideology.socfree + 25;
 }
 if (getUrlVars()["size"] === "size3") {
-  ideology.polfree = ideology.polfree + 50
+  ideology.polfree = ideology.socfree + 50;
 }
 if (getUrlVars()["size"] === "size4") {
-  ideology.polfree = ideology.polfree + 75
+  ideology.polfree = ideology.socfree + 75;
 }
 if (getUrlVars()["size"] === "size5") {
-  ideology.polfree = ideology.polfree + 100
+  ideology.polfree = ideology.socfree + 100;
 }
-	return ideology.polfree;
+	return ideology;
 }
-document.getElementById("idk").innerHTML = ideology();
+
+function matching(){
+var ideology = ideology();
+var ideologies = [{polfree: 100, ecofree: 100, socfree: 100, inter: 50, name: "Anarcho-capitalism"},
+    {polfree: 100, ecofree: 100, socfree: 100, inter: 75, name: "Anarcho-primitivism"},
+{polfree: 100, ecofree: 75, socfree: 100, inter: 90, name: "Traditional primitivism"},
+{polfree: 100, ecofree: 50, socfree: 75, inter: 100, name: "Universalism"},
+{polfree: 90, ecofree: 25, socfree: 50, inter: 100, name: "Communalism"},
+{polfree: 50, ecofree: 0, socfree: 25, inter: 100, name: "Anarcho-communism"},
+{polfree: 50, ecofree: 0, socfree: 25, inter: 75, name: "Anarcho-syndicalism"},
+{polfree: 25, ecofree: 0, socfree: 0, inter: 75, name: "Democratic socialism"},
+{polfree: 25, ecofree: 0, socfree: 0, inter: 50, name: "Labour unionism"},
+{polfree: 25, ecofree: 0, socfree: 0, inter: 25, name: "Social corporatism"},
+{polfree: 0, ecofree: 0, socfree: 0, inter: 25, name: "Communism"},
+{polfree: 0, ecofree: 0, socfree: 0, inter: 0, name: "National socialism"},
+{polfree: 0, ecofree: 25, socfree: 0, inter: 0, name: "Authoritarian-left"},
+{polfree: 0, ecofree: 25, socfree: 25, inter: 0, name: "Military junta"},
+{polfree: 0, ecofree: 50, socfree: 25, inter: 0, name: "Authoritarian-right"},
+{polfree: 0, ecofree: 75, socfree: 50, inter: 0, name: "Paleoconservatism"},
+{polfree: 0, ecofree: 100, socfree: 75, inter: 0, name: "Paleolibertarianism"},
+{polfree: 25, ecofree: 100, socfree: 100, inter: 25, name: "Libertarianism"},
+{polfree: 75, ecofree: 75, socfree: 75, inter: 50, name: "National anarchism"},
+{polfree: 75, ecofree: 50, socfree: 50, inter: 75, name: "Communitarianism"},
+{polfree: 50, ecofree: 25, socfree: 25, inter: 75, name: "Distributism"},
+{polfree: 50, ecofree: 25, socfree: 50, inter: 50, name: "Social liberalism"},
+{polfree: 25, ecofree: 25, socfree: 25, inter: 75, name: "Mutualism"},
+{polfree: 25, ecofree: 25, socfree: 25, inter: 50, name: "Syndicalism"},
+{polfree: 25, ecofree: 25, socfree: 25, inter: 50, name: "Socialism"},
+{polfree: 0, ecofree: 25, socfree: 25, inter: 25, name: "Marxism"},
+{polfree: 75, ecofree: 75, socfree: 50, inter: 25, name: "Conservatism"},
+{polfree: 75, ecofree: 90, socfree: 75, inter: 50, name: "Minarchism"},
+{polfree: 75, ecofree: 75, socfree: 90, inter: 50, name: "Classical liberalism"},
+{polfree: 50, ecofree: 50, socfree: 50, inter: 50, name: "Centrism"},
+{polfree: 50, ecofree: 75, socfree: 50, inter: 25, name: "Republicanism"},
+{polfree: 50, ecofree: 75, socfree: 75, inter: 50, name: "Directory republicanism"},
+{polfree: 25, ecofree: 50, socfree: 25, inter: 50, name: "Social democracy"},
+{polfree: 50, ecofree: 25, socfree: 25, inter: 50, name: "Democracy"},
+{polfree: 75, ecofree: 50, socfree: 50, inter: 75, name: "Direct democracy"},
+{polfree: 20, ecofree: 50, socfree: 50, inter: 20, name: "Third way"},
+{polfree: 25, ecofree: 50, socfree: 50, inter: 25, name: "Synarchism"},
+{polfree: 25, ecofree: 25, socfree: 25, inter: 25, name: "Third position"}
+];
+var percentages = new Array(ideologies.length);
+for (var i = 0; i < ideologies.length; i++) {
+percentages[i] = {percentage: 0, name: "idk"};
+percentages[i].name = ideologies[i].name;
+percentages[i].percentage = 1-(Math.abs(ideologies[i].polfree-ideology.polfree)+Math.abs(ideologies[i].ecofree-ideology.ecofree)+Math.abs(ideologies[i].socfree-ideology.socfree)+Math.abs(ideologies[i].inter-ideology.inter))/400;
+percentages.sort(function(a, b){return parseFloat(a.percentage) - parseFloat(b.percentage)});
+return percentages;
+}
+}
+var closest = matching();
+document.getElementById("idk").innerHTML = closest[0].name;
+document.getElementById("idk").innerHTML = closest[1].name;
+document.getElementById("idk").innerHTML =closest[2].name;
+document.getElementById("idk").innerHTML = closest[3].name;
+document.getElementById("idk").innerHTML = closest[4].name;
 </script>
 </body>
 </html>
