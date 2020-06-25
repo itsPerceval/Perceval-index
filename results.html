@@ -85,11 +85,10 @@ percentages.sort(function(a, b){return parseFloat(a.percentage) - parseFloat(b.p
 return percentages;
 }
 var closest = matching();
-document.getElementById("idk").innerHTML = closest[0].name;
-document.getElementById("idk").innerHTML = closest[1].name;
-document.getElementById("idk").innerHTML =closest[2].name;
-document.getElementById("idk").innerHTML = closest[3].name;
-document.getElementById("idk").innerHTML = closest[4].name;
+for (i=0;i<4;i++)
+{
+document.write(closest[i] + "<br >");
+}
 </script>
 </body>
 </html>
