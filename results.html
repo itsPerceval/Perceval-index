@@ -13,7 +13,7 @@ function getUrlVars() {
     }
     return vars;
 }
-function ideology(){
+function calculating(){
     var ideology = {polfree: 0, ecofree: 0, socfree: 0, inter: 0};
 
 if (getUrlVars()["size"] === "size1") {
@@ -35,7 +35,7 @@ if (getUrlVars()["size"] === "size5") {
 }
 
 function matching(){
-var ideology = ideology();
+var ideology = calculating();
 var ideologies = [{polfree: 100, ecofree: 100, socfree: 100, inter: 50, name: "Anarcho-capitalism"},
     {polfree: 100, ecofree: 100, socfree: 100, inter: 75, name: "Anarcho-primitivism"},
 {polfree: 100, ecofree: 75, socfree: 100, inter: 90, name: "Traditional primitivism"},
