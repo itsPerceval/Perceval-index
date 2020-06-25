@@ -1,219 +1,222 @@
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>Questionnaire</title>
-    <meta name="description" content="Introduction">
-    <style>
+<meta charset="utf-8">
+<title>Questionnaire</title>
+<meta name="description" content="Introduction">
+<style>
 /* The container */
 .container {
-  display: block;
-  position: relative;
-  padding-left: 560px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+display: block;
+position: relative;
+padding-left: 660px;
+margin-bottom: 12px;
+cursor: pointer;
+font-size: 22px;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
 }
 
 /* Hide the browser's default radio button */
 .container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
+position: absolute;
+opacity: 0;
+cursor: pointer;
 }
 
 /* Create a custom radio button */
 .checkmark {
-  position: absolute;
-  top: 0;
-  left: 525;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
+position: absolute;
+top: 0;
+left: 625px;
+height: 25px;
+width: 25px;
+background-color: #eee;
+border-radius: 50%;
 }
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-  background-color: #ccc;
+background-color: #ccc;
 }
 
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #2196F3;
+background-color: #2196F3;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
+content: "";
+position: absolute;
+display: none;
 }
 
 /* Show the indicator (dot/circle) when checked */
 .container input:checked ~ .checkmark:after {
-  display: block;
+display: block;
 }
 
 /* Style the indicator (dot/circle) */
 .container .checkmark:after {
- 	top: 9px;
-	left: 9px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: white;
+top: 9px;
+left: 9px;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: white;
 }
- .button {
-	background-color: #4CAF50;
-    border: none;
-    color: white;
-    width: 100px;
-    padding: 20px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    cursor: pointer;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    justify-content: center;
-    top: 50%;
-    }
-    .submitter {
-    text-align: center;
+.button {
+background-color: #4CAF50;
+border: none;
+color: white;
+width: 100px;
+padding: 20px 20px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+cursor: pointer;
+border-radius: 12px;
+box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+justify-content: center;
+top: 50%;
+}
+.button:hover {
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.submitter {
+text-align: center;
 }
 h1 {
-	color: white;
- 	text-align: center;
-	font: 100px "Times New Roman", Times, serif;
-	font-style: italic;
+color: white;
+text-align: center;
+font: 100px "Times New Roman", Times, serif;
+font-style: italic;
 }
 h2 {
-	margin-left: 500px;
+margin-left: 600px;
 }
 
 </style>
 </head>
 <body>
-	<h1>Answer these questions.</h1>
-	
-	<form action="/action_page.php">
-	<h2>1. What is your ideal government size?</h2>
-	<label class="container" for="maximum size">Maximum size.<input type="radio"  id="maximum size" name="govsize" value="maximum size"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="rather large">Rather large.<input type="radio"  id="rather large" name="govsize" value="Rather large"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="preferably small">Preferably small.<input type="radio"  id="preferably small" name="govsize" value="Preferably small"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="minimum size">Minimum size.<input type="radio"  id="minimum size" name="govsize" value="Minimum size"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="no government">No government.<input type="radio"  id="no government" name="govsize" value="No government"><span class="checkmark"></span></label><br>
-	<br>
-    <h2>2. What is your policy on drugs?</h2>
-	<label class="container" for="drugs1">All drugs are illegal.<input type="radio"  id="drugs1" name="drugs" value="drugs1"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="drugs2">Soft drugs are legal in limits, hard drugs criminalized.<input type="radio"  id="drugs2" name="drugs" value="drugs2"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="drugs3">Soft drugs are legal, hard  drugs are prohibited but no criminal offense.<input type="radio"  id="drugs3" name="drugs" value="drugs3"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="drugs4">Soft drugs are legal, hard drugs are legal in limits.<input type="radio"  id="drugs4" name="drugs" value="drugs4"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="drugs5">All drugs are completely legalized.<input type="radio"  id="drugs5" name="drugs" value="drugs5"><span class="checkmark"></span></label><br>
-	<br>
-        <h2>3. What is your policy on guns?</h2>
-	<label class="container" for="guns1">No citizen is allowed to own guns.<input type="radio"  id="guns1" name="guns" value="guns1"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="guns2">Tight control on buying age, licensing and background checks, no big guns.<input type="radio"  id="guns2" name="guns" value="guns2"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="guns3">Tight control on buying age, licensing and background checks.<input type="radio"  id="guns3" name="guns" value="guns3"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="guns4">Relaxed control on age, licensing and background checks.<input type="radio"  id="guns4" name="guns" value="guns4"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="guns5">No gun control.<input type="radio"  id="guns5" name="guns" value="guns5"><span class="checkmark"></span></label><br>
-	<br>
-        <h2>4. What is your ideal economical system?</h2>
-	<label class="container" for="eco1">Pure socialism.<input type="radio"  id="eco1" name="eco" value="eco1"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="eco2">Smaller form of socialism with private property.<input type="radio"  id="eco2" name="eco" value="eco2"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="eco3">Corporatism, mixed economy.<input type="radio"  id="eco3" name="eco" value="eco3"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="eco4">Moderate form of capitalism with a social market.<input type="radio"  id="eco4" name="eco" value="eco4"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="eco5">Free market capitalism.<input type="radio"  id="eco5" name="eco" value="eco5"><span class="checkmark"></span></label><br>
-	<br>
-        <h2>5. What election system do you desire?</h2>
-	<label class="container" for="elec1">Autocracy, the leader is predestined.<input type="radio"  id="elec1" name="elec" value="elec1"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="elec2">Election by plutocracy, the landowners and the wealthy.<input type="radio"  id="elec2" name="elec" value="elec2"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="elec3">Election by meritocracy, the well-educated.<input type="radio"  id="elec3" name="elec" value="elec3"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="elec4">Election by democracy, all citizens.<input type="radio"  id="elec4" name="elec" value="elec4"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="elec5">Anarchy, no elections.<input type="radio"  id="elec5" name="elec" value="elec5"><span class="checkmark"></span></label><br>
-	<br>
-    <h2>6. What is your policy on immigration?</h2>
-	<label class="container" for="immi1">No immigration.<input type="radio"  id="immi1" name="immi" value="immi1"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="immi2">Educational and cultural merit-based immigration.<input type="radio"  id="immi2" name="immi" value="immi2"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="immi3">Educational merit-based immigration.<input type="radio"  id="immi3" name="immi" value="immi3"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="immi4">Quota-based immigration.<input type="radio"  id="immi4" name="immi" value="immi4"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="immi5">Unrestricted immigration.<input type="radio"  id="immi5" name="immi" value="immi5"><span class="checkmark"></span></label><br>
-	<br>
-        <h2>7. When is abortion legal?</h2>
-	<label class="container" for="abor1">Never.<input type="radio"  id="abor1" name="abor" value="abor1"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="abor2">Life is in danger.<input type="radio"  id="abor2" name="abor" value="abor2"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="abor3">Rape and above.<input type="radio"  id="abor3" name="abor" value="abor3"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="abor4">Birth defects and above.<input type="radio"  id="abor4" name="abor" value="abor4"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="abor5">Convenience and above.<input type="radio"  id="abor5" name="abor" value="abor5"><span class="checkmark"></span></label><br>
-	<br>
-        <h2>8. What are your views on transgenderism?</h2>
-	<label class="container" for="tran1">Therapy is the only solution, gender dysphoria is a disorder.<input type="radio"  id="tran1" name="tran" value="tran1"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="tran2">Therapy is usual solution, medical treatment is last resort.<input type="radio"  id="tran2" name="tran" value="tran2"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="tran3">Therapy is usual solution, medical treatment is decided by individual.<input type="radio"  id="tran3" name="tran" value="tran3"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="tran4">Solution decided by individual after certain age.<input type="radio"  id="tran4" name="tran" value="tran4"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="tran5">Gender is a social construct.<input type="radio"  id="tran5" name="tran" value="tran5"><span class="checkmark"></span></label><br>
-	<br>
-        <h2>9. What sort of nationalist are you?</h2>
-	<label class="container" for="nat1">Ethnic nationalist and below.<input type="radio"  id="nat1" name="nat" value="nat1"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="nat2">Religious nationalist and below.<input type="radio"  id="nat2" name="nat" value="nat2"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="nat3">Cultural nationalist and below.<input type="radio"  id="nat3" name="nat" value="nat3"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="nat4">Civic nationalist.<input type="radio"  id="nat4" name="nat" value="nat4"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="nat5">Nationalism is rejected.<input type="radio"  id="nat5" name="nat" value="nat5"><span class="checkmark"></span></label><br>
-	<br>
-            <h2>10. What social contract do citizens have for each other?</h2>
-	<label class="container" for="cont1">Absolutely nothing, egoism.<input type="radio"  id="cont1" name="cont" value="cont1"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="cont2">Citizens should seek to help each other out, paternalism.<input type="radio"  id="cont2" name="cont" value="cont2"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="cont3">Citizens are bound and united by culture, populism.<input type="radio"  id="cont3" name="cont" value="cont3"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="cont4">Citizens are like a family.<input type="radio"  id="cont4" name="cont" value="cont4"><span class="checkmark"></span></label><br>
-	
-	<label class="container" for="cont5">Citizens are like a bundle of sticks, fascism.<input type="radio"  id="cont5" name="cont" value="cont5"><span class="checkmark"></span></label><br>
-	<br>
+<h1>Answer these questions.</h1>
+
+<form action="/action_page.php">
+<h2>1. What is your ideal government size?</h2>
+<label class="container" for="size1">Maximum size.<input type="radio"  id="size1" name="size" value="size1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="size2">Rather large.<input type="radio"  id="size2" name="size" value="size2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="size3">Preferably small.<input type="radio"  id="size3" name="size" value="size3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="size4">Minimum size.<input type="radio"  id="size4" name="size" value="size4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="size5">No government.<input type="radio"  id="size5" name="size" value="size5"><span class="checkmark"></span></label><br>
+<br>
+<h2>2. What is your policy on drugs?</h2>
+<label class="container" for="drugs1">All drugs are illegal.<input type="radio"  id="drugs1" name="drugs" value="drugs1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="drugs2">Soft drugs are legal in limits, hard drugs criminalized.<input type="radio"  id="drugs2" name="drugs" value="drugs2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="drugs3">Soft drugs are legal, hard  drugs are prohibited but no criminal offense.<input type="radio"  id="drugs3" name="drugs" value="drugs3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="drugs4">Soft drugs are legal, hard drugs are legal in limits.<input type="radio"  id="drugs4" name="drugs" value="drugs4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="drugs5">All drugs are completely legalized.<input type="radio"  id="drugs5" name="drugs" value="drugs5"><span class="checkmark"></span></label><br>
+<br>
+<h2>3. What is your policy on guns?</h2>
+<label class="container" for="guns1">No citizen is allowed to own guns.<input type="radio"  id="guns1" name="guns" value="guns1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="guns2">Tight control on buying age, licensing and background checks, no big guns.<input type="radio"  id="guns2" name="guns" value="guns2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="guns3">Tight control on buying age, licensing and background checks.<input type="radio"  id="guns3" name="guns" value="guns3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="guns4">Relaxed control on age, licensing and background checks.<input type="radio"  id="guns4" name="guns" value="guns4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="guns5">No gun control.<input type="radio"  id="guns5" name="guns" value="guns5"><span class="checkmark"></span></label><br>
+<br>
+<h2>4. What is your ideal economical system?</h2>
+<label class="container" for="eco1">Pure socialism.<input type="radio"  id="eco1" name="eco" value="eco1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="eco2">Smaller form of socialism with private property.<input type="radio"  id="eco2" name="eco" value="eco2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="eco3">Corporatism, mixed economy.<input type="radio"  id="eco3" name="eco" value="eco3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="eco4">Moderate form of capitalism with a social market.<input type="radio"  id="eco4" name="eco" value="eco4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="eco5">Free market capitalism.<input type="radio"  id="eco5" name="eco" value="eco5"><span class="checkmark"></span></label><br>
+<br>
+<h2>5. What election system do you desire?</h2>
+<label class="container" for="elec1">Autocracy, the leader is predestined.<input type="radio"  id="elec1" name="elec" value="elec1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="elec2">Election by plutocracy, the landowners and the wealthy.<input type="radio"  id="elec2" name="elec" value="elec2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="elec3">Election by meritocracy, the well-educated.<input type="radio"  id="elec3" name="elec" value="elec3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="elec4">Election by democracy, all citizens.<input type="radio"  id="elec4" name="elec" value="elec4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="elec5">Anarchy, no elections.<input type="radio"  id="elec5" name="elec" value="elec5"><span class="checkmark"></span></label><br>
+<br>
+<h2>6. What is your policy on immigration?</h2>
+<label class="container" for="immi1">No immigration.<input type="radio"  id="immi1" name="immi" value="immi1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="immi2">Educational and cultural merit-based immigration.<input type="radio"  id="immi2" name="immi" value="immi2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="immi3">Educational merit-based immigration.<input type="radio"  id="immi3" name="immi" value="immi3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="immi4">Quota-based immigration.<input type="radio"  id="immi4" name="immi" value="immi4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="immi5">Unrestricted immigration.<input type="radio"  id="immi5" name="immi" value="immi5"><span class="checkmark"></span></label><br>
+<br>
+<h2>7. When is abortion legal?</h2>
+<label class="container" for="abor1">Never.<input type="radio"  id="abor1" name="abor" value="abor1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="abor2">Life is in danger.<input type="radio"  id="abor2" name="abor" value="abor2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="abor3">Rape and above.<input type="radio"  id="abor3" name="abor" value="abor3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="abor4">Birth defects and above.<input type="radio"  id="abor4" name="abor" value="abor4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="abor5">Convenience and above.<input type="radio"  id="abor5" name="abor" value="abor5"><span class="checkmark"></span></label><br>
+<br>
+<h2>8. What are your views on transgenderism?</h2>
+<label class="container" for="tran1">Therapy is the only solution, gender dysphoria is a disorder.<input type="radio"  id="tran1" name="tran" value="tran1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="tran2">Therapy is usual solution, medical treatment is last resort.<input type="radio"  id="tran2" name="tran" value="tran2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="tran3">Therapy is usual solution, medical treatment is decided by individual.<input type="radio"  id="tran3" name="tran" value="tran3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="tran4">Solution decided by individual after certain age.<input type="radio"  id="tran4" name="tran" value="tran4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="tran5">Gender is a social construct.<input type="radio"  id="tran5" name="tran" value="tran5"><span class="checkmark"></span></label><br>
+<br>
+<h2>9. What sort of nationalist are you?</h2>
+<label class="container" for="nat1">Ethnic nationalist and below.<input type="radio"  id="nat1" name="nat" value="nat1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="nat2">Religious nationalist and below.<input type="radio"  id="nat2" name="nat" value="nat2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="nat3">Cultural nationalist and below.<input type="radio"  id="nat3" name="nat" value="nat3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="nat4">Civic nationalist.<input type="radio"  id="nat4" name="nat" value="nat4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="nat5">Nationalism is rejected.<input type="radio"  id="nat5" name="nat" value="nat5"><span class="checkmark"></span></label><br>
+<br>
+<h2>10. What social contract do citizens have for each other?</h2>
+<label class="container" for="cont1">Absolutely nothing, egoism.<input type="radio"  id="cont1" name="cont" value="cont1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cont2">Citizens should seek to help each other out, paternalism.<input type="radio"  id="cont2" name="cont" value="cont2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cont3">Citizens are bound and united by culture, populism.<input type="radio"  id="cont3" name="cont" value="cont3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cont4">Citizens are like a family.<input type="radio"  id="cont4" name="cont" value="cont4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cont5">Citizens are like a bundle of sticks, fascism.<input type="radio"  id="cont5" name="cont" value="cont5"><span class="checkmark"></span></label><br>
+<br>
 <div class="submitter">
-  <input class="button" type="submit" value="Submit">
+<input class="button" type="submit" value="Submit">
 </div>
 </form>
 </body>
