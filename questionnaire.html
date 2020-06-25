@@ -4,6 +4,69 @@
     <title>Questionnaire</title>
     <meta name="description" content="Introduction">
     <style>
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
 h1 {
 	color: white;
  	text-align: center;
@@ -15,17 +78,17 @@ h1 {
 <body>
 	<h1>Answer these questions.</h1>
 	<form action="/action_page.php">
-	<p>1. What is your ideal government size?</p>
-	<input type="radio" id="maximum size" name="govsize" value="maximum size">
-	<label for="maximum size">Maximum size</label><br>
-	<input type="radio" id="rather large" name="govsize" value="Rather large">
-	<label for="rather large">Rather large</label><br>
-	<input type="radio" id="preferably small" name="govsize" value="Preferably small">
-	<label for="preferably small">Preferably small</label><br>
-	<input type="radio" id="minimum size" name="govsize" value="Minimum size">
-	<label for="minimum size">Minimum size</label><br>
-	<input type="radio" id="no government" name="govsize" value="No government">
-	<label for="no government">No government</label><br>
+	<h2>1. What is your ideal government size?</h2>
+	
+	<label class="container" for="maximum size">Maximum size<input type="radio"  id="maximum size" name="govsize" value="maximum size"><span class="checkmark"></span></label><br>
+	
+	<label class="container" for="rather large">Rather large<input type="radio"  id="rather large" name="govsize" value="Rather large"><span class="checkmark"></span></label><br>
+	
+	<label class="container" for="preferably small">Preferably small<input type="radio"  id="preferably small" name="govsize" value="Preferably small"><span class="checkmark"></span></label><br>
+	
+	<label class="container" for="minimum size">Minimum size<input type="radio"  id="minimum size" name="govsize" value="Minimum size"><span class="checkmark"></span></label><br>
+	
+	<label class="container" for="no government">No government<input type="radio"  id="no government" name="govsize" value="No government"><span class="checkmark"></span></label><br>
 	<br>
   <input type="submit" value="Submit">
 </form>
