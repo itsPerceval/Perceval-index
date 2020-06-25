@@ -14,25 +14,25 @@ function getUrlVars() {
     return vars;
 }
 function ideology(){
-	var size = getUrlVars()["size"];
+	var size = ;
     var ideology = {polfree: SN, ecofree: CI, socfree: CF, inter: LG};
 var SN = 0;
 var CI = 0;
 var CF = 0;
 var LG = 0;
-if (size = size1) {
+if (getUrlVars()["size"] ==== size1) {
   CI = CI + 100;
 }
-if (size = size2) {
+if (getUrlVars()["size"] ==== size2) {
   CI = CI + 75;
 }
-if (size = size3) {
+if (getUrlVars()["size"] ==== size3) {
   CI = CI + 50;
 }
-if (size = size4) {
+if (getUrlVars()["size"] ==== size4) {
   CI = CI + 25;
 }
-if (size = size5) {
+if (getUrlVars()["size"] ==== size5) {
   CI = CI + 0;
 	return ideology.ecofree;
 }
