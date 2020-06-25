@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Result page</title>
-    <meta name="description" content="answers of the test">
-  </head>
-  <body>
-    <h1>Results</h1>
-    <!-- Content -->
-  </body>
+<html>
+<body>
+<p id="idk"></p>
+<script>
+function getUrlVars() {
+    var vars = [], hash;
+    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+    for(var i = 0; i < hashes.length; i++) {
+        hash = hashes[i].split('=');
+        vars.push(hash[0]);
+        vars[hash[0]] = hash[1];
+    }
+    return vars;
+}
+function ideology(){
+	var str = getUrlVars()["str"];
+    }
+document.getElementById("idk").innerHTML = ideology();
+</script>
+</body>
 </html>
