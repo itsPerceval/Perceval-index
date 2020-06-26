@@ -19,6 +19,7 @@ font-family: "Comic Sans MS", cursive, sans-serif;
 <body>
 <h1>Your results:</h1>
 <p id="join"></p>
+<p id="join2"></p>
 <script>
 function getUrlVars() {
     var vars = [], hash;
@@ -270,7 +271,8 @@ return percentages;
 var closest = matching();
 for (i=0;i<5;i++)
 {
-document.getElementById("join").innerHTML = (closest[i].percentage*100).toFixed(2) + "% " + closest[i].name + "<br >";
+document.getElementById("join2").innerHTML = (closest[0].percentage*100).toFixed(2) + "% " + closest[0].name + "<br >" + (closest[1].percentage*100).toFixed(2) + "% " + closest[1].name + "<br >" + 
+ (closest[2].percentage*100).toFixed(2) + "% " + closest[2].name + "<br >" + (closest[3].percentage*100).toFixed(2) + "% " + closest[3].name + "<br >" + (closest[4].percentage*100).toFixed(2) + "% " + closest[4].name + "<br >";
 }
 </script>
 </body>
