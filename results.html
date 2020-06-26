@@ -18,6 +18,7 @@ font-family: "Comic Sans MS", cursive, sans-serif;
 </style>
 <body>
 <h1>Your results:</h1>
+<p id="join"></p>
 <script>
 function getUrlVars() {
     var vars = [], hash;
@@ -211,11 +212,11 @@ ideology.polfree = ideology.polfree/2
 ideology.ecofree = ideology.ecofree/2
 ideology.socfree = ideology.socfree/7
 ideology.inter = ideology.inter/2
-document.write(ideology.polfree.toFixed(0) + " political freedom index (naturalism vs statism)<br >");
-document.write(ideology.ecofree.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >");
-document.write(ideology.socfree.toFixed(0) + " social freedom index (individualism vs collectivism)<br >");
-document.write(ideology.inter.toFixed(0) + " international index (globalism vs localism)<br >");
-	return ideology;
+document.getElementById("join").innerHTML = ideology.polfree.toFixed(0) + " political freedom index (naturalism vs statism)<br >";
+document.getElementById("join").innerHTML = ideology.ecofree.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >";
+document.getElementById("join").innerHTML = ideology.socfree.toFixed(0) + " social freedom index (individualism vs collectivism)<br >";
+document.getElementById("join").innerHTML = ideology.inter.toFixed(0) + " international index (globalism vs localism)<br >";
+return ideology;
 }
 
 function matching(){
@@ -272,7 +273,7 @@ return percentages;
 var closest = matching();
 for (i=0;i<5;i++)
 {
-document.write((closest[i].percentage*100).toFixed(2) + "% " + closest[i].name + "<br >");
+document.getElementById("join").innerHTML = (closest[i].percentage*100).toFixed(2) + "% " + closest[i].name + "<br >";
 }
 </script>
 </body>
