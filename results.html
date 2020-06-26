@@ -209,10 +209,47 @@ if (getUrlVars()["prov"] === "prov5") {
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
 }
+if (getUrlVars()["rel"] === "rel1") {
+  ideology.socfree = ideology.socfree + 0;
+  ideology.inter = ideology.inter + 100;
+}
+if (getUrlVars()["rel"] === "rel2") {
+  ideology.socfree = ideology.socfree + 100;
+  ideology.inter = ideology.inter + 50;
+}
+if (getUrlVars()["rel"] === "rel3") {
+  ideology.socfree = ideology.socfree + 75;
+  ideology.inter = ideology.inter + 25;
+}
+if (getUrlVars()["rel"] === "rel4") {
+  ideology.socfree = ideology.socfree + 25;
+  ideology.inter = ideology.inter + 0;
+}
+if (getUrlVars()["rel"] === "rel5") {
+  ideology.socfree = ideology.socfree + 0;
+  ideology.inter = ideology.inter + 0;
+}
+if (getUrlVars()["pris"] === "pris1") {
+  ideology.socfree = ideology.socfree + 0;
+  ideology.ecofree = ideology.ecofree + 50;
+}
+ if (getUrlVars()["pris"] === "pris2") {
+  ideology.socfree = ideology.socfree + 25;
+  ideology.ecofree = ideology.ecofree + 50;
+}
+ if (getUrlVars()["pris"] === "pris3") {
+  ideology.socfree = ideology.socfree + 50;
+}
+ if (getUrlVars()["pris"] === "pris4") {
+  ideology.socfree = ideology.socfree + 75;
+}
+ if (getUrlVars()["pris"] === "pris5") {
+  ideology.socfree = ideology.socfree + 100;
+}
 ideology.polfree = ideology.polfree/2
-ideology.ecofree = ideology.ecofree/2
-ideology.socfree = ideology.socfree/7
-ideology.inter = ideology.inter/2
+ideology.ecofree = ideology.ecofree/2.5
+ideology.socfree = ideology.socfree/9
+ideology.inter = ideology.inter/3
 document.getElementById("join").innerHTML = ideology.polfree.toFixed(0) + " political freedom index (naturalism vs statism)<br >" + ideology.ecofree.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >" + ideology.socfree.toFixed(0) + " social freedom index (individualism vs collectivism)<br >" + ideology.inter.toFixed(0) + " international index (globalism vs localism)<br >";
 return ideology;
 }
