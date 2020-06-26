@@ -17,19 +17,139 @@ function calculating(){
     var ideology = {polfree: 0, ecofree: 0, socfree: 0, inter: 0};
 
 if (getUrlVars()["size"] === "size1") {
-  ideology.polfree = ideology.socfree + 0;
+  ideology.socfree = ideology.socfree + 0;
 }
 if (getUrlVars()["size"] === "size2") {
-  ideology.polfree = ideology.socfree + 25;
+  ideology.socfree = ideology.socfree + 25;
 }
 if (getUrlVars()["size"] === "size3") {
-  ideology.polfree = ideology.socfree + 50;
+  ideology.socfree = ideology.socfree + 50;
 }
 if (getUrlVars()["size"] === "size4") {
-  ideology.polfree = ideology.socfree + 75;
+  ideology.socfree = ideology.socfree + 75;
 }
 if (getUrlVars()["size"] === "size5") {
-  ideology.polfree = ideology.socfree + 100;
+  ideology.socfree = ideology.socfree + 100;
+}
+if (getUrlVars()["drugs"] === "drugs1") {
+  ideology.socfree = ideology.socfree + 0;
+}
+if (getUrlVars()["drugs"] === "drugs2") {
+  ideology.socfree = ideology.socfree + 25;
+}
+if (getUrlVars()["drugs"] === "drugs3") {
+  ideology.socfree = ideology.socfree + 50;
+}
+if (getUrlVars()["drugs"] === "drugs4") {
+  ideology.socfree = ideology.socfree + 75;
+}
+if (getUrlVars()["drugs"] === "drugs5") {
+  ideology.socfree = ideology.socfree + 100;
+}
+if (getUrlVars()["guns"] === "guns1") {
+  ideology.socfree = ideology.socfree + 0;
+}
+if (getUrlVars()["guns"] === "guns2") {
+  ideology.socfree = ideology.socfree + 25;
+}
+if (getUrlVars()["guns"] === "guns3") {
+  ideology.socfree = ideology.socfree + 50;
+}
+if (getUrlVars()["guns"] === "guns4") {
+  ideology.socfree = ideology.socfree + 75;
+}
+if (getUrlVars()["guns"] === "guns5") {
+  ideology.socfree = ideology.socfree + 100;
+}
+if (getUrlVars()["eco"] === "eco1") {
+  ideology.ecofree = ideology.ecofree + 0;
+}
+if (getUrlVars()["eco"] === "eco2") {
+  ideology.ecofree = ideology.ecofree + 25;
+}
+if (getUrlVars()["eco"] === "eco3") {
+  ideology.ecofree = ideology.ecofree + 50;
+}
+if (getUrlVars()["eco"] === "eco4") {
+  ideology.ecofree = ideology.ecofree + 75;
+}
+if (getUrlVars()["eco"] === "eco5") {
+  ideology.ecofree = ideology.ecofree + 100;
+}
+if (getUrlVars()["elec"] === "elec1") {
+  ideology.polfree = ideology.polfree + 0;
+}
+if (getUrlVars()["elec"] === "elec2") {
+  ideology.polfree = ideology.polfree + 25;
+}
+if (getUrlVars()["elec"] === "elec3") {
+  ideology.polfree = ideology.polfree + 50;
+}
+if (getUrlVars()["elec"] === "elec4") {
+  ideology.polfree = ideology.polfree + 75;
+}
+if (getUrlVars()["elec"] === "elec5") {
+  ideology.polfree = ideology.polfree + 100;
+}
+if (getUrlVars()["immi"] === "immi1") {
+  ideology.inter = ideology.inter + 0;
+}
+if (getUrlVars()["immi"] === "immi2") {
+  ideology.inter = ideology.inter + 25;
+}
+if (getUrlVars()["immi"] === "immi3") {
+  ideology.inter = ideology.inter + 50;
+}
+if (getUrlVars()["immi"] === "immi4") {
+  ideology.inter = ideology.inter + 75;
+}
+if (getUrlVars()["immi"] === "immi5") {
+  ideology.inter = ideology.inter + 100;
+}
+if (getUrlVars()["abor"] === "abor1") {
+  ideology.socfree = ideology.socfree + 100;
+}
+if (getUrlVars()["abor"] === "abor2") {
+  ideology.socfree = ideology.socfree + 75;
+}
+if (getUrlVars()["abor"] === "abor3") {
+  ideology.socfree = ideology.socfree + 50;
+}
+if (getUrlVars()["abor"] === "abor4") {
+  ideology.socfree = ideology.socfree + 25;
+}
+if (getUrlVars()["abor"] === "abor5") {
+  ideology.socfree = ideology.socfree + 0;
+}
+if (getUrlVars()["tran"] === "tran1") {
+  ideology.socfree = ideology.socfree + 100;
+}
+if (getUrlVars()["tran"] === "tran2") {
+  ideology.socfree = ideology.socfree + 75;
+}
+if (getUrlVars()["tran"] === "tran3") {
+  ideology.socfree = ideology.socfree + 50;
+}
+if (getUrlVars()["tran"] === "tran4") {
+  ideology.socfree = ideology.socfree + 25;
+}
+if (getUrlVars()["tran"] === "tran5") {
+  ideology.socfree = ideology.socfree + 0;
+}
+if (getUrlVars()["nat"] === "nat1") {
+  ideology.inter = ideology.inter + 0;
+}
+if (getUrlVars()["nat"] === "nat2") {
+  ideology.inter = ideology.inter + 25;
+}
+if (getUrlVars()["nat"] === "nat3") {
+  ideology.inter = ideology.inter + 50;
+}
+if (getUrlVars()["nat"] === "nat4") {
+  ideology.inter = ideology.inter + 75;
+}
+if (getUrlVars()["nat"] === "nat5") {
+  ideology.inter = ideology.inter + 100;
 }
 	return ideology;
 }
