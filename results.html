@@ -212,10 +212,7 @@ ideology.polfree = ideology.polfree/2
 ideology.ecofree = ideology.ecofree/2
 ideology.socfree = ideology.socfree/7
 ideology.inter = ideology.inter/2
-document.getElementById("join").innerHTML = ideology.polfree.toFixed(0) + " political freedom index (naturalism vs statism)<br >";
-document.getElementById("join").innerHTML = ideology.ecofree.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >";
-document.getElementById("join").innerHTML = ideology.socfree.toFixed(0) + " social freedom index (individualism vs collectivism)<br >";
-document.getElementById("join").innerHTML = ideology.inter.toFixed(0) + " international index (globalism vs localism)<br >";
+document.getElementById("join").innerHTML = ideology.polfree.toFixed(0) + " political freedom index (naturalism vs statism)<br >" + ideology.ecofree.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >" + ideology.socfree.toFixed(0) + " social freedom index (individualism vs collectivism)<br >" + ideology.inter.toFixed(0) + " international index (globalism vs localism)<br >";
 return ideology;
 }
 
