@@ -32,7 +32,7 @@ function getUrlVars() {
     return vars;
 }
 function calculating(){
-    var ideology = {polfree: 0, ecofree: 0, socfree: 0, inter: 0};
+    var ideology = {polfree: 0, ecofree: 0, socfree: 0, iden: 0};
 
 if (getUrlVars()["size"] === "size1") {
   ideology.socfree = ideology.socfree + 0;
@@ -110,19 +110,19 @@ if (getUrlVars()["elec"] === "elec5") {
   ideology.polfree = ideology.polfree + 100;
 }
 if (getUrlVars()["immi"] === "immi1") {
-  ideology.inter = ideology.inter + 0;
+  ideology.iden = ideology.iden + 0;
 }
 if (getUrlVars()["immi"] === "immi2") {
-  ideology.inter = ideology.inter + 25;
+  ideology.iden = ideology.iden + 25;
 }
 if (getUrlVars()["immi"] === "immi3") {
-  ideology.inter = ideology.inter + 50;
+  ideology.iden = ideology.iden + 50;
 }
 if (getUrlVars()["immi"] === "immi4") {
-  ideology.inter = ideology.inter + 75;
+  ideology.iden = ideology.iden + 75;
 }
 if (getUrlVars()["immi"] === "immi5") {
-  ideology.inter = ideology.inter + 100;
+  ideology.iden = ideology.iden + 100;
 }
 if (getUrlVars()["abor"] === "abor1") {
   ideology.socfree = ideology.socfree + 100;
@@ -155,19 +155,19 @@ if (getUrlVars()["tran"] === "tran5") {
   ideology.socfree = ideology.socfree + 0;
 }
 if (getUrlVars()["nat"] === "nat1") {
-  ideology.inter = ideology.inter + 0;
+  ideology.iden = ideology.iden + 0;
 }
 if (getUrlVars()["nat"] === "nat2") {
-  ideology.inter = ideology.inter + 25;
+  ideology.iden = ideology.iden + 25;
 }
 if (getUrlVars()["nat"] === "nat3") {
-  ideology.inter = ideology.inter + 50;
+  ideology.iden = ideology.iden + 50;
 }
 if (getUrlVars()["nat"] === "nat4") {
-  ideology.inter = ideology.inter + 75;
+  ideology.iden = ideology.iden + 75;
 }
 if (getUrlVars()["nat"] === "nat5") {
-  ideology.inter = ideology.inter + 100;
+  ideology.iden = ideology.iden + 100;
 }
 if (getUrlVars()["cont"] === "cont1") {
   ideology.socfree = ideology.socfree + 100;
@@ -211,23 +211,23 @@ if (getUrlVars()["prov"] === "prov5") {
 }
 if (getUrlVars()["rel"] === "rel1") {
   ideology.socfree = ideology.socfree + 0;
-  ideology.inter = ideology.inter + 100;
+  ideology.iden = ideology.iden + 100;
 }
 if (getUrlVars()["rel"] === "rel2") {
   ideology.socfree = ideology.socfree + 100;
-  ideology.inter = ideology.inter + 50;
+  ideology.iden = ideology.iden + 50;
 }
 if (getUrlVars()["rel"] === "rel3") {
   ideology.socfree = ideology.socfree + 75;
-  ideology.inter = ideology.inter + 25;
+  ideology.iden = ideology.iden + 25;
 }
 if (getUrlVars()["rel"] === "rel4") {
   ideology.socfree = ideology.socfree + 25;
-  ideology.inter = ideology.inter + 0;
+  ideology.iden = ideology.iden + 0;
 }
 if (getUrlVars()["rel"] === "rel5") {
   ideology.socfree = ideology.socfree + 0;
-  ideology.inter = ideology.inter + 0;
+  ideology.iden = ideology.iden + 0;
 }
 if (getUrlVars()["pris"] === "pris1") {
   ideology.socfree = ideology.socfree + 0;
@@ -247,49 +247,49 @@ if (getUrlVars()["pris"] === "pris1") {
   ideology.socfree = ideology.socfree + 100;
 }
  if (getUrlVars()["terri"] === "terri1") {
-  ideology.inter = ideology.inter + 100;
+  ideology.iden = ideology.iden + 100;
 }
   if (getUrlVars()["terri"] === "terri2") {
-  ideology.inter = ideology.inter + 50;
+  ideology.iden = ideology.iden + 50;
 }
   if (getUrlVars()["terri"] === "terri3") {
-  ideology.inter = ideology.inter + 0;
+  ideology.iden = ideology.iden + 0;
 }
   if (getUrlVars()["terri"] === "terri4") {
-  ideology.inter = ideology.inter + 50;
+  ideology.iden = ideology.iden + 50;
 }
   if (getUrlVars()["terri"] === "terri5") {
-  ideology.inter = ideology.inter + 75;
+  ideology.iden = ideology.iden + 75;
 }
    if (getUrlVars()["stan"] === "stan1") {
-  ideology.inter = ideology.inter + 100;
+  ideology.iden = ideology.iden + 100;
 }
    if (getUrlVars()["stan"] === "stan2") {
-  ideology.inter = ideology.inter + 75;
+  ideology.iden = ideology.iden + 75;
 }
    if (getUrlVars()["stan"] === "stan3") {
-  ideology.inter = ideology.inter + 50;
+  ideology.iden = ideology.iden + 50;
 }
    if (getUrlVars()["stan"] === "stan4") {
-  ideology.inter = ideology.inter + 25;
+  ideology.iden = ideology.iden + 25;
 }
    if (getUrlVars()["stan"] === "stan5") {
-  ideology.inter = ideology.inter + 0;
+  ideology.iden = ideology.iden + 0;
 }
     if (getUrlVars()["fut"] === "fut1") {
-  ideology.inter = ideology.inter + 100;
+  ideology.iden = ideology.iden + 100;
 }
     if (getUrlVars()["fut"] === "fut2") {
-  ideology.inter = ideology.inter + 75;
+  ideology.iden = ideology.iden + 75;
 }
     if (getUrlVars()["fut"] === "fut3") {
-  ideology.inter = ideology.inter + 50;
+  ideology.iden = ideology.iden + 50;
 }
     if (getUrlVars()["fut"] === "fut4") {
-  ideology.inter = ideology.inter + 25;
+  ideology.iden = ideology.iden + 25;
 }
     if (getUrlVars()["fut"] === "fut5") {
-  ideology.inter = ideology.inter + 0;
+  ideology.iden = ideology.iden + 0;
 }
     if (getUrlVars()["str"] === "str1") {
   ideology.polfree = ideology.polfree + 100;
@@ -309,59 +309,60 @@ if (getUrlVars()["pris"] === "pris1") {
 ideology.polfree = ideology.polfree/3
 ideology.ecofree = ideology.ecofree/2.5
 ideology.socfree = ideology.socfree/9
-ideology.inter = ideology.inter/5
-document.getElementById("join").innerHTML = ideology.polfree.toFixed(0) + " political freedom index (naturalism vs statism)<br >" + ideology.ecofree.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >" + ideology.socfree.toFixed(0) + " social freedom index (individualism vs collectivism)<br >" + ideology.inter.toFixed(0) + " international index (globalism vs localism)<br >";
+ideology.iden = ideology.iden/5
+document.getElementById("join").innerHTML = ideology.polfree.toFixed(0) + " political freedom index (naturalism vs statism)<br >" + ideology.ecofree.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >" + ideology.socfree.toFixed(0) + " social freedom index (individualism vs collectivism)<br >" + ideology.iden
+ .toFixed(0) + " identity index (localism vs globalism)<br >";
 return ideology;
 }
 
 function matching(){
 var ideology = calculating();
-var ideologies = [{polfree: 100, ecofree: 100, socfree: 100, inter: 50, name: "Anarcho-capitalism"},
-    {polfree: 100, ecofree: 100, socfree: 100, inter: 75, name: "Anarcho-primitivism"},
-{polfree: 100, ecofree: 75, socfree: 100, inter: 90, name: "Traditional primitivism"},
-{polfree: 100, ecofree: 50, socfree: 75, inter: 100, name: "Universalism"},
-{polfree: 90, ecofree: 25, socfree: 50, inter: 100, name: "Communalism"},
-{polfree: 50, ecofree: 0, socfree: 25, inter: 100, name: "Anarcho-communism"},
-{polfree: 50, ecofree: 0, socfree: 25, inter: 75, name: "Anarcho-syndicalism"},
-{polfree: 25, ecofree: 0, socfree: 0, inter: 75, name: "Democratic socialism"},
-{polfree: 25, ecofree: 0, socfree: 0, inter: 50, name: "Labour unionism"},
-{polfree: 25, ecofree: 0, socfree: 0, inter: 25, name: "Social corporatism"},
-{polfree: 0, ecofree: 0, socfree: 0, inter: 25, name: "Communism"},
-{polfree: 0, ecofree: 0, socfree: 0, inter: 0, name: "National socialism"},
-{polfree: 0, ecofree: 25, socfree: 0, inter: 0, name: "Authoritarian-left"},
-{polfree: 0, ecofree: 25, socfree: 25, inter: 0, name: "Military junta"},
-{polfree: 0, ecofree: 50, socfree: 25, inter: 0, name: "Authoritarian-right"},
-{polfree: 50, ecofree: 75, socfree: 50, inter: 0, name: "Paleoconservatism"},
-{polfree: 75, ecofree: 100, socfree: 75, inter: 0, name: "Paleolibertarianism"},
-{polfree: 25, ecofree: 100, socfree: 100, inter: 25, name: "Libertarianism"},
-{polfree: 75, ecofree: 75, socfree: 75, inter: 50, name: "National anarchism"},
-{polfree: 75, ecofree: 50, socfree: 50, inter: 75, name: "Communitarianism"},
-{polfree: 50, ecofree: 25, socfree: 25, inter: 75, name: "Distributism"},
-{polfree: 50, ecofree: 25, socfree: 50, inter: 50, name: "Social liberalism"},
-{polfree: 25, ecofree: 25, socfree: 25, inter: 75, name: "Mutualism"},
-{polfree: 25, ecofree: 25, socfree: 25, inter: 50, name: "Syndicalism"},
-{polfree: 25, ecofree: 25, socfree: 25, inter: 50, name: "Socialism"},
-{polfree: 0, ecofree: 25, socfree: 25, inter: 25, name: "Marxism"},
-{polfree: 75, ecofree: 75, socfree: 50, inter: 25, name: "Conservatism"},
-{polfree: 75, ecofree: 90, socfree: 75, inter: 50, name: "Minarchism"},
-{polfree: 75, ecofree: 75, socfree: 90, inter: 50, name: "Classical liberalism"},
-{polfree: 50, ecofree: 50, socfree: 50, inter: 50, name: "Centrism"},
-{polfree: 50, ecofree: 75, socfree: 50, inter: 25, name: "Republicanism"},
-{polfree: 50, ecofree: 75, socfree: 75, inter: 50, name: "Directory republicanism"},
-{polfree: 25, ecofree: 50, socfree: 25, inter: 50, name: "Social democracy"},
-{polfree: 50, ecofree: 25, socfree: 25, inter: 50, name: "Democracy"},
-{polfree: 75, ecofree: 50, socfree: 50, inter: 75, name: "Direct democracy"},
-{polfree: 20, ecofree: 50, socfree: 50, inter: 20, name: "Third way"},
-{polfree: 25, ecofree: 50, socfree: 50, inter: 25, name: "Synarchism"},
-{polfree: 25, ecofree: 25, socfree: 25, inter: 25, name: "Third position"},
-{polfree: 80, ecofree: 98, socfree: 90, inter: 10, name: "Schuijrenism"},
-{polfree: 80, ecofree: 100, socfree: 90, inter: 0, name: "Hoppean anarcho-capitalist"},
+var ideologies = [{polfree: 100, ecofree: 100, socfree: 100, iden: 50, name: "Anarcho-capitalism"},
+    {polfree: 100, ecofree: 100, socfree: 100, iden: 25, name: "Anarcho-primitivism"},
+{polfree: 100, ecofree: 75, socfree: 100, iden: 10, name: "Traditional primitivism"},
+{polfree: 100, ecofree: 50, socfree: 75, iden: 0, name: "Universalism"},
+{polfree: 90, ecofree: 25, socfree: 50, iden: 0, name: "Communalism"},
+{polfree: 50, ecofree: 0, socfree: 25, iden: 0, name: "Anarcho-communism"},
+{polfree: 50, ecofree: 0, socfree: 25, iden: 75, name: "Anarcho-syndicalism"},
+{polfree: 25, ecofree: 0, socfree: 0, iden: 75, name: "Democratic socialism"},
+{polfree: 25, ecofree: 0, socfree: 0, iden: 50, name: "Labour unionism"},
+{polfree: 25, ecofree: 0, socfree: 0, iden: 25, name: "Social corporatism"},
+{polfree: 0, ecofree: 0, socfree: 0, iden: 25, name: "Communism"},
+{polfree: 0, ecofree: 0, socfree: 0, iden: 100, name: "National socialism"},
+{polfree: 0, ecofree: 25, socfree: 0, iden: 100, name: "Authoritarian-left"},
+{polfree: 0, ecofree: 25, socfree: 25, iden: 100, name: "Military junta"},
+{polfree: 0, ecofree: 50, socfree: 25, iden: 100, name: "Authoritarian-right"},
+{polfree: 50, ecofree: 75, socfree: 50, iden: 100, name: "Paleoconservatism"},
+{polfree: 75, ecofree: 100, socfree: 75, iden: 100, name: "Paleolibertarianism"},
+{polfree: 25, ecofree: 100, socfree: 100, iden: 75, name: "Libertarianism"},
+{polfree: 75, ecofree: 75, socfree: 75, iden: 50, name: "National anarchism"},
+{polfree: 75, ecofree: 50, socfree: 50, iden: 25, name: "Communitarianism"},
+{polfree: 50, ecofree: 25, socfree: 25, iden: 25, name: "Distributism"},
+{polfree: 50, ecofree: 25, socfree: 50, iden: 50, name: "Social liberalism"},
+{polfree: 25, ecofree: 25, socfree: 25, iden: 25, name: "Mutualism"},
+{polfree: 25, ecofree: 25, socfree: 25, iden: 50, name: "Syndicalism"},
+{polfree: 25, ecofree: 25, socfree: 25, iden: 50, name: "Socialism"},
+{polfree: 0, ecofree: 25, socfree: 25, iden: 75, name: "Marxism"},
+{polfree: 75, ecofree: 75, socfree: 50, iden: 75, name: "Conservatism"},
+{polfree: 75, ecofree: 90, socfree: 75, iden: 50, name: "Minarchism"},
+{polfree: 75, ecofree: 75, socfree: 90, iden: 50, name: "Classical liberalism"},
+{polfree: 50, ecofree: 50, socfree: 50, iden: 50, name: "Centrism"},
+{polfree: 50, ecofree: 75, socfree: 50, iden: 75, name: "Republicanism"},
+{polfree: 50, ecofree: 75, socfree: 75, iden: 50, name: "Directory republicanism"},
+{polfree: 25, ecofree: 50, socfree: 25, iden: 50, name: "Social democracy"},
+{polfree: 50, ecofree: 25, socfree: 25, iden: 50, name: "Democracy"},
+{polfree: 75, ecofree: 50, socfree: 50, iden: 25, name: "Direct democracy"},
+{polfree: 20, ecofree: 50, socfree: 50, iden: 80, name: "Third way"},
+{polfree: 25, ecofree: 50, socfree: 50, iden: 75, name: "Synarchism"},
+{polfree: 25, ecofree: 25, socfree: 25, iden: 75, name: "Third position"},
+{polfree: 80, ecofree: 98, socfree: 90, iden: 90, name: "Schuijrenism"},
+{polfree: 80, ecofree: 100, socfree: 90, iden: 100, name: "Hoppean anarcho-capitalist"},
 ];
 var percentages = new Array(ideologies.length);
 for (var i = 0; i < ideologies.length; i++) {
 percentages[i] = {percentage: 0, name: "idk"};
 percentages[i].name = ideologies[i].name;
-percentages[i].percentage = 1-(Math.abs(ideologies[i].polfree-ideology.polfree)+Math.abs(ideologies[i].ecofree-ideology.ecofree)+Math.abs(ideologies[i].socfree-ideology.socfree)+Math.abs(ideologies[i].inter-ideology.inter))/400;
+percentages[i].percentage = 1-(Math.abs(ideologies[i].polfree-ideology.polfree)+Math.abs(ideologies[i].ecofree-ideology.ecofree)+Math.abs(ideologies[i].socfree-ideology.socfree)+Math.abs(ideologies[i].iden-ideology.iden))/400;
 percentages.sort(function(a, b){return b.percentage - a.percentage});
 }
 return percentages;
