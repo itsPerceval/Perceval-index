@@ -1159,25 +1159,25 @@ if (getUrlVars()["pris"] === "pris1") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 25;
+  ideology.iden = ideology.iden + 0;
 }
      if (getUrlVars()["lgbt"] === "lgbt3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 50;
+  ideology.iden = ideology.iden + 0;
 }
      if (getUrlVars()["lgbt"] === "lgbt4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 75;
+  ideology.iden = ideology.iden + 0;
 }
      if (getUrlVars()["lgbt"] === "lgbt5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 100;
+  ideology.iden = ideology.iden + 0;
 }
      if (getUrlVars()["body"] === "body1") {
   ideology.polfree = ideology.polfree + 0;
@@ -1242,7 +1242,7 @@ if (getUrlVars()["pris"] === "pris1") {
 ideology.polfree = ideology.polfree/34
 ideology.ecofree = ideology.ecofree/7
 ideology.socfree = ideology.socfree/26
-ideology.iden = ideology.iden/15
+ideology.iden = ideology.iden/14
 document.getElementById("join").innerHTML = ideology.polfree.toFixed(0) + " political freedom index (naturalism vs statism)<br >" + ideology.ecofree.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >" + ideology.socfree.toFixed(0) + " social freedom index (individualism vs collectivism)<br >" + ideology.iden.toFixed(0) + " identity index (localism vs globalism)<br >";
 return ideology;
 }
