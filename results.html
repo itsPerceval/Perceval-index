@@ -18,38 +18,37 @@ color: white;
 margin-left: 29%;
 font-family: "Comic Sans MS", cursive, sans-serif;
 }
- .image1 {
-  position: relative;
-  top: 0;
-  left: 0;
-  border: 1px red solid;
-}
-.image2 {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  height: 20px;
-  width: 20px;
-  border: 1px green solid;
-}
- .wrapper {
-    text-align: center;
-}
+    .fishes
+    {
+      position: relative;
+      top: 0;
+      left: 0;
+    }
+    .fish
+    {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 20px;
+      width: 20px;
+    }
 </style>
 </head>
 <body>
 <h1>Your results:</h1>
 <p id="join"></p>
 <p id="join2"></p>
- <div class="wrapper">
-   <img class="image1" src="https://files.catbox.moe/2mckwx.PNG" />
-  <img class="image2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" />
- </div>
+  <div style="position: relative; left: 0; top: 0;  display: block;
+  margin-left: auto;
+  margin-right: auto;">
+    <img src="https://files.catbox.moe/2mckwx.PNG" class="fishes"/>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fish"/>
+  </div>
 <script>
-var margtop=25;
-var margleft=25;
-document.querySelector(".image2").style.marginTop = margtop+'%';
-document.querySelector(".image2").style.marginLeft = margleft+'%';
+var margtop=150;
+var margleft=620;
+document.querySelector(".fish").style.marginTop = margtop+'px';
+document.querySelector(".fish").style.marginLeft = margleft+'px';
 function getUrlVars() {
     var vars = [], hash;
     var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
