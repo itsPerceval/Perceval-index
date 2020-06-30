@@ -41,6 +41,30 @@ font-family: "Comic Sans MS", cursive, sans-serif;
       height: 20px;
       width: 20px;
     }
+            .fishh
+    {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 20px;
+      width: 20px;
+    }
+            .fi
+    {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 20px;
+      width: 20px;
+    }
+            .fishhh
+    {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 20px;
+      width: 20px;
+    }
 </style>
 </head>
 <body>
@@ -53,6 +77,9 @@ font-family: "Comic Sans MS", cursive, sans-serif;
     <img src="https://files.catbox.moe/2mckwx.PNG" class="fishes"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fish"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fis"/>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fishh"/>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fi"/>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fishhh"/>
   </div>
 <script>
 var margtop=150;
@@ -1278,6 +1305,18 @@ ideology.ecofree = ideology.ecofree/8
 ideology.socfree = ideology.socfree/24
 ideology.iden = ideology.iden/15
 document.getElementById("join").innerHTML = ideology.polfree.toFixed(0) + " political freedom index (naturalism vs statism)<br >" + ideology.ecofree.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >" + ideology.socfree.toFixed(0) + " social freedom index (individualism vs collectivism)<br >" + ideology.iden.toFixed(0) + " identity index (localism vs globalism)<br >";
+var martop=20+6.45*ideology.polfree.toFixed(0);
+var marleft=765+2.68*ideology.polfree.toFixed(0);
+document.querySelector(".fishh").style.marginTop = martop+'px';
+document.querySelector(".fishh").style.marginLeft = marleft+'px';
+var martop=475-2.65*ideology.ecofree.toFixed(0);
+var marleft=577+6.43*ideology.ecofree.toFixed(0);
+document.querySelector(".fi").style.marginTop = martop+'px';
+document.querySelector(".fi").style.marginLeft = marleft+'px';
+var martop=210+2.65*ideology.socfree.toFixed(0);
+var marleft=577+6.43*ideology.socfree.toFixed(0);
+document.querySelector(".fishhh").style.marginTop = martop+'px';
+document.querySelector(".fishhh").style.marginLeft = marleft+'px';
 var martop=665-6.45*ideology.iden.toFixed(0);
 var marleft=765+2.68*ideology.iden.toFixed(0);
 document.querySelector(".fis").style.marginTop = martop+'px';
