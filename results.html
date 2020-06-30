@@ -1360,28 +1360,29 @@ if (getUrlVars()["pris"] === "pris1") {
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-var polfree = ideology.polfree/30
-var ecofree = ideology.ecofree/9
-var socfree = ideology.socfree/25
-var iden = ideology.iden/15
-document.getElementById("join").innerHTML = "You are approximately " + (100-(polfree.toFixed(0)+ecofree.toFixed(0)+socfree.toFixed(0)+iden.toFixed(0))/4).toFixed(2) + "% left-wing, thereby " + ((polfree.toFixed(0)+ecofree.toFixed(0)+socfree.toFixed(0)+iden.toFixed(0))/4).toFixed(0) + "% right-wing.<br >" + ideology.polfree.toFixed(0) + " political freedom index (naturalism vs statism)<br >" + ideology.ecofree.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >" + ideology.socfree.toFixed(0) + " social freedom index (individualism vs collectivism)<br >" + ideology.iden.toFixed(0) + " identity index (localism vs globalism)<br >";
-var martop=20+6.45*polfree.toFixed(0);
-var marleft=765+2.68*polfree.toFixed(0);
+var pol = ideology.polfree/30
+var eco = ideology.ecofree/9
+var soc = ideology.socfree/25
+var ide = ideology.iden/15
+document.getElementById("join").innerHTML = "You are approximately " + (100-(pol.toFixed(0)+eco.toFixed(0)+soc.toFixed(0)+ide.toFixed(0))/4).toFixed(2) + "% left-wing, thereby " + ((pol.toFixed(0)+eco.toFixed(0)+soc.toFixed(0)+ide.toFixed(0))/4).toFixed(0) + "% right-wing.<br >" + pol.toFixed(0) + " political freedom index (naturalism vs statism)<br >" + eco.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >" + soc.toFixed(0) + " social freedom index (individualism vs collectivism)<br >" + ide.toFixed(0) + " identity index (localism vs globalism)<br >";
+var martop=20+6.45*pol.toFixed(0);
+var marleft=765+2.68*pol.toFixed(0);
 document.querySelector(".fishh").style.marginTop = martop+'px';
 document.querySelector(".fishh").style.marginLeft = marleft+'px';
-var martop=475-2.65*ecofree.toFixed(0);
-var marleft=577+6.43*ecofree.toFixed(0);
+var martop=475-2.65*eco.toFixed(0);
+var marleft=577+6.43*eco.toFixed(0);
 document.querySelector(".fi").style.marginTop = martop+'px';
 document.querySelector(".fi").style.marginLeft = marleft+'px';
-var martop=210+2.65*socfree.toFixed(0);
-var marleft=577+6.43*socfree.toFixed(0);
+var martop=210+2.65*soc.toFixed(0);
+var marleft=577+6.43*soc.toFixed(0);
 document.querySelector(".fishhh").style.marginTop = martop+'px';
 document.querySelector(".fishhh").style.marginLeft = marleft+'px';
-var martop=665-6.45*iden.toFixed(0);
-var marleft=765+2.68*iden.toFixed(0);
+var martop=665-6.45*ide.toFixed(0);
+var marleft=765+2.68*ide.toFixed(0);
 document.querySelector(".fis").style.marginTop = martop+'px';
 document.querySelector(".fis").style.marginLeft = marleft+'px';
-return ideology;
+var finalIdeology = {polfree: pol, ecofree: eco, socfree: soc, iden: ide};
+return finalIdeology;
 }
 
 function matching(){
