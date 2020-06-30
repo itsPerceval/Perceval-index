@@ -28,9 +28,9 @@ font-family: "Comic Sans MS", cursive, sans-serif;
   width: 50%;
 }
 .image2 {
-  position: relative;
-  top: 8px;
-  left: 8px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
   height: 20px;
   width: 20px;
    display: block;
@@ -51,8 +51,8 @@ font-family: "Comic Sans MS", cursive, sans-serif;
   <img class="image2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" />
  </div>
 <script>
-var margtop=630;
-var margleft=1145;
+var margtop=0;
+var margleft=0;
 document.querySelector(".image2").style.marginTop = margtop+'px';
 document.querySelector(".image2").style.marginLeft = margleft+'px';
 function getUrlVars() {
