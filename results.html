@@ -1364,6 +1364,7 @@ var pol = ideology.polfree/30
 var eco = ideology.ecofree/9
 var soc = ideology.socfree/25
 var ide = ideology.iden/15
+var finalIdeology = {polfree: pol, ecofree: eco, socfree: soc, iden: ide};
 var leftist = 100-(pol.toFixed(0)+eco.toFixed(0)+soc.toFixed(0)+ide.toFixed(0))/4)
 var rightist = (pol.toFixed(0)+eco.toFixed(0)+soc.toFixed(0)+ide.toFixed(0))/4)
 document.getElementById("join").innerHTML = "You are approximately " + leftist.toFixed(2) + "% left-wing, thereby " + rightist.toFixed(2) + "% right-wing.<br >" + pol.toFixed(0) + " political freedom index (naturalism vs statism)<br >" + eco.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >" + soc.toFixed(0) + " social freedom index (individualism vs collectivism)<br >" + ide.toFixed(0) + " identity index (localism vs globalism)<br >";
@@ -1383,7 +1384,6 @@ var martop=665-6.45*ide.toFixed(0);
 var marleft=765+2.68*ide.toFixed(0);
 document.querySelector(".fis").style.marginTop = martop+'px';
 document.querySelector(".fis").style.marginLeft = marleft+'px';
-var finalIdeology = {polfree: pol, ecofree: eco, socfree: soc, iden: ide};
 return finalIdeology;
 }
 
