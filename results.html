@@ -1278,8 +1278,8 @@ ideology.ecofree = ideology.ecofree/8
 ideology.socfree = ideology.socfree/24
 ideology.iden = ideology.iden/15
 document.getElementById("join").innerHTML = ideology.polfree.toFixed(0) + " political freedom index (naturalism vs statism)<br >" + ideology.ecofree.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >" + ideology.socfree.toFixed(0) + " social freedom index (individualism vs collectivism)<br >" + ideology.iden.toFixed(0) + " identity index (localism vs globalism)<br >";
-var martop=665-2.67*ideology.iden.toFixed(0);
-var marleft=765+6.42*ideology.iden.toFixed(0);
+var martop=665-6.45*ideology.iden.toFixed(0);
+var marleft=765+2.68*ideology.iden.toFixed(0);
 document.querySelector(".fis").style.marginTop = martop+'px';
 document.querySelector(".fis").style.marginLeft = marleft+'px';
 return ideology;
