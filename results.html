@@ -33,6 +33,14 @@ font-family: "Comic Sans MS", cursive, sans-serif;
       height: 20px;
       width: 20px;
     }
+        .fis
+    {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 20px;
+      width: 20px;
+    }
 </style>
 </head>
 <body>
@@ -44,6 +52,7 @@ font-family: "Comic Sans MS", cursive, sans-serif;
   margin-right: auto;">
     <img src="https://files.catbox.moe/2mckwx.PNG" class="fishes"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fish"/>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fis"/>
   </div>
 <script>
 var margtop=150;
@@ -1269,6 +1278,10 @@ ideology.ecofree = ideology.ecofree/8
 ideology.socfree = ideology.socfree/24
 ideology.iden = ideology.iden/15
 document.getElementById("join").innerHTML = ideology.polfree.toFixed(0) + " political freedom index (naturalism vs statism)<br >" + ideology.ecofree.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >" + ideology.socfree.toFixed(0) + " social freedom index (individualism vs collectivism)<br >" + ideology.iden.toFixed(0) + " identity index (localism vs globalism)<br >";
+var martop=665-2.67*ideology.iden.toFixed(0);
+var marleft=765+6.42*ideology.iden.toFixed(0);
+document.querySelector(".fis").style.marginTop = martop+'px';
+document.querySelector(".fis").style.marginLeft = marleft+'px';
 return ideology;
 }
 
