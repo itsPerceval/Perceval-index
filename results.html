@@ -18,33 +18,19 @@ color: white;
 margin-left: 29%;
 font-family: "Comic Sans MS", cursive, sans-serif;
 }
- .container {
-  text-align: center;
-}
- img { 
-  width: 100%;
-  height: auto;
-  opacity: 0.3;
-}
  .image1 {
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
-    display: block;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-  width: 100%;
+  border: 1px red solid;
 }
 .image2 {
-  position: fixed;
-  top: 0;
-  left: 0;
-   display: block;
-  margin-left: auto;
-  margin-right: auto;
- text-align: center;
- width: 100%;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  height: 20px;
+  width: 20px;
+  border: 1px green solid;
 }
 </style>
 </head>
@@ -52,15 +38,13 @@ font-family: "Comic Sans MS", cursive, sans-serif;
 <h1>Your results:</h1>
 <p id="join"></p>
 <p id="join2"></p>
- <div class="container">
-  
+   <img class="image1" src="https://files.catbox.moe/2mckwx.PNG" />
   <img class="image2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" />
- </div>
 <script>
-var margtop = 50;
-var margleft = 50;
-document.querySelector(".image2").style.marginTop = margtop+'%';
-document.querySelector(".image2").style.marginLeft = margleft+'%';
+var margtop=265;
+var margleft=685;
+document.querySelector(".image2").style.marginTop = margtop+'px';
+document.querySelector(".image2").style.marginLeft = margleft+'px';
 function getUrlVars() {
     var vars = [], hash;
     var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -1345,8 +1329,8 @@ return percentages;
 var closest = matching();
 for (i=0;i<5;i++)
 {
-document.getElementById("join2").innerHTML = "1. " + (closest[0].percentage*100).toFixed(2) + "% " + closest[0].name + "<br > 2. " + (closest[1].percentage*100).toFixed(2) + "% " + closest[1].name + "<br > 3. " + 
- (closest[2].percentage*100).toFixed(2) + "% " + closest[2].name + "<br > 4. " + (closest[3].percentage*100).toFixed(2) + "% " + closest[3].name + "<br > 5. " + (closest[4].percentage*100).toFixed(2) + "% " + closest[4].name + "<br >";
+document.getElementById("join2").innerHTML = (closest[0].percentage*100).toFixed(2) + "% " + closest[0].name + "<br >" + (closest[1].percentage*100).toFixed(2) + "% " + closest[1].name + "<br >" + 
+ (closest[2].percentage*100).toFixed(2) + "% " + closest[2].name + "<br >" + (closest[3].percentage*100).toFixed(2) + "% " + closest[3].name + "<br >" + (closest[4].percentage*100).toFixed(2) + "% " + closest[4].name + "<br >";
 }
 </script>
 </body>
