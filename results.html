@@ -65,6 +65,46 @@ font-family: "Comic Sans MS", sans-serif;
       height: 20px;
       width: 20px;
     }
+                .one
+    {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 20px;
+      width: 20px;
+    }
+                    .two
+    {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 20px;
+      width: 20px;
+    }
+                    .three
+    {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 20px;
+      width: 20px;
+    }
+                    .four
+    {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 20px;
+      width: 20px;
+    }
+                    .five
+    {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 20px;
+      width: 20px;
+    }
 </style>
 </head>
 <body>
@@ -75,11 +115,15 @@ font-family: "Comic Sans MS", sans-serif;
   margin-left: auto;
   margin-right: auto;">
     <img src="https://files.catbox.moe/wsctut.png" class="fishes"/>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fish"/>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fis"/>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fishh"/>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fi"/>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fishhh"/>
+    <img src="https://files.catbox.moe/wro1gv.png" class="fis"/>
+    <img src="https://files.catbox.moe/wro1gv.png" class="fishh"/>
+    <img src="https://files.catbox.moe/wro1gv.png" class="fi"/>
+    <img src="https://files.catbox.moe/wro1gv.png" class="fishhh"/>
+    <img src="https://files.catbox.moe/hzyo43.png" class="one"/>
+    <img src="https://files.catbox.moe/tgiy90.png" class="two"/>
+    <img src="https://files.catbox.moe/tgiy90.png" class="three"/>
+    <img src="https://files.catbox.moe/tgiy90.png" class="four"/>
+    <img src="https://files.catbox.moe/tgiy90.png" class="five"/>
   </div>
 <script>
 function getUrlVars() {
@@ -1381,10 +1425,6 @@ document.querySelector(".fis").style.marginTop = martop+'px';
 document.querySelector(".fis").style.marginLeft = marleft+'px';
 return ideology;
 }
-var margtop=243;
-var margleft=725;
-document.querySelector(".fish").style.marginTop = margtop+'px';
-document.querySelector(".fish").style.marginLeft = margleft+'px';
 function matching(){
 var ideology = calculating();
 var ideologies = [{polfree: 95, ecofree: 100, socfree: 95, iden: 50, name: "Anarcho-capitalism", xcor: 1270, ycor: 450},
@@ -1406,6 +1446,7 @@ var ideologies = [{polfree: 95, ecofree: 100, socfree: 95, iden: 50, name: "Anar
 {polfree: 70, ecofree: 40, socfree: 60, iden: 45, name: "National anarchism", xcor: 1030, ycor: 530},
 {polfree: 60, ecofree: 45, socfree: 60, iden: 45, name: "Georgism", xcor: 1005, ycor: 495},
 {polfree: 90, ecofree: 15, socfree: 75, iden: 0, name: "Universalism", xcor: 930, ycor: 680},
+{polfree: 75, ecofree: 35, socfree: 70, iden: 20, name: "Communitarianism", xcor: 990, ycor: 565},
 {polfree: 80, ecofree: 25, socfree: 70, iden: 10, name: "Synthesism", xcor: 945, ycor: 613},
 {polfree: 90, ecofree: 10, socfree: 50, iden: 0, name: "Communalism", xcor: 800, ycor: 655},
 {polfree: 85, ecofree: 10, socfree: 50, iden: 10, name: "Post-anarchism", xcor: 795, ycor: 612},
@@ -1431,62 +1472,105 @@ var ideologies = [{polfree: 95, ecofree: 100, socfree: 95, iden: 50, name: "Anar
 {polfree: 25, ecofree: 25, socfree: 20, iden: 45, name: "Revisionist marxism", xcor: 730, ycor: 305},
 {polfree: 20, ecofree: 10, socfree: 0, iden: 45, name: "Progressivism", xcor: 650, ycor: 270},
 {polfree: 15, ecofree: 0, socfree: 0, iden: 45, name: "Social corporatism", xcor: 627, ycor: 225},
-{polfree: 40, ecofree: 45, socfree: 40, iden: 55, name: "Popular democracy", xcor: 853, ycor: 305},
-{polfree: 30, ecofree: 40, socfree: 25, iden: 55, name: "Radical democracy", xcor: 770, ycor: 277},
-{polfree: 25, ecofree: 25, socfree: 15, iden: 60, name: "Labour movement", xcor: 725, ycor: 243},
-
-{polfree: 0, ecofree: 0, socfree: 0, iden: 25, name: "Communism"},
-{polfree: 0, ecofree: 0, socfree: 0, iden: 100, name: "National socialism"},
-{polfree: 0, ecofree: 25, socfree: 0, iden: 100, name: "Authoritarian-left"},
-{polfree: 0, ecofree: 25, socfree: 25, iden: 100, name: "Military junta"},
-{polfree: 0, ecofree: 50, socfree: 25, iden: 100, name: "Authoritarian-right"},
-{polfree: 75, ecofree: 75, socfree: 75, iden: 90, name: "Paleoconservatism"},
-{polfree: 80, ecofree: 95, socfree: 80, iden: 75, name: "Paleolibertarianism"},
-{polfree: 75, ecofree: 75, socfree: 80, iden: 50, name: "Libertarianism"},
-{polfree: 75, ecofree: 50, socfree: 50, iden: 25, name: "Communitarianism"},
-{polfree: 25, ecofree: 25, socfree: 25, iden: 50, name: "Syndicalism"},
-{polfree: 25, ecofree: 25, socfree: 25, iden: 50, name: "Socialism"},
-{polfree: 0, ecofree: 25, socfree: 25, iden: 20, name: "Marxism"},
-{polfree: 60, ecofree: 65, socfree: 65, iden: 75, name: "Conservatism"},
-{polfree: 85, ecofree: 85, socfree: 80, iden: 50, name: "Minarchy"},
-{polfree: 75, ecofree: 75, socfree: 75, iden: 50, name: "Classical liberalism"},
-{polfree: 50, ecofree: 50, socfree: 50, iden: 50, name: "Centrism"},
-{polfree: 50, ecofree: 65, socfree: 50, iden: 60, name: "Republicanism"},
-{polfree: 50, ecofree: 60, socfree: 60, iden: 60, name: "Directory republicanism"},
-{polfree: 25, ecofree: 50, socfree: 25, iden: 50, name: "Social democracy"},
-{polfree: 20, ecofree: 50, socfree: 50, iden: 80, name: "Third way"},
-{polfree: 25, ecofree: 50, socfree: 50, iden: 75, name: "Synarchism"},
-{polfree: 25, ecofree: 25, socfree: 25, iden: 75, name: "Third position"},
-{polfree: 75, ecofree: 95, socfree: 75, iden: 85, name: "Schuijrenism"},
-{polfree: 85, ecofree: 100, socfree: 75, iden: 75, name: "Hoppeanism"},
-{polfree: 50, ecofree: 70, socfree: 50, iden: 90, name: "Venizelism"},
-{polfree: 25, ecofree: 85, socfree: 50, iden: 70, name: "Pinochetism"},
-{polfree: 25, ecofree: 75, socfree: 50, iden: 100, name: "Consitutional monarchy"},
-{polfree: 35, ecofree: 80, socfree: 50, iden: 75, name: "Thatcherism"},
-{polfree: 25, ecofree: 50, socfree: 50, iden: 90, name: "Integralism"},
-{polfree: 50, ecofree: 90, socfree: 50, iden: 80, name: "National capitalism"},
-{polfree: 60, ecofree: 65, socfree: 50, iden: 90, name: "National conservatism"},
-{polfree: 50, ecofree: 60, socfree: 50, iden: 65, name: "Whiggism"},
-{polfree: 60, ecofree: 75, socfree: 60, iden: 75, name: "Classical republicanism"},
-{polfree: 40, ecofree: 60, socfree: 55, iden: 80, name: "Conservative royalism"},
-{polfree: 45, ecofree: 50, socfree: 50, iden: 70, name: "Confederalism"},
-{polfree: 65, ecofree: 90, socfree: 65, iden: 80, name: "Traditional conservatism"},                  
+{polfree: 40, ecofree: 45, socfree: 40, iden: 50, name: "Popular democracy", xcor: 853, ycor: 305},
+{polfree: 30, ecofree: 40, socfree: 25, iden: 50, name: "Radical democracy", xcor: 770, ycor: 277},
+{polfree: 25, ecofree: 25, socfree: 15, iden: 50, name: "Labour movement", xcor: 725, ycor: 243},
+{polfree: 10, ecofree: 10, socfree: 10, iden: 50, name: "Sociocracy", xcor: 702, ycor: 210},
+{polfree: 30, ecofree: 30, socfree: 35, iden: 50, name: "Social democracy", xcor: 855, ycor: 262},
+{polfree: 25, ecofree: 30, socfree: 25, iden: 50, name: "Neoliberalism", xcor: 810, ycor: 242},
+{polfree: 20, ecofree: 25, socfree: 20, iden: 50, name: "Socialism", xcor: 790, ycor: 220},
+{polfree: 15, ecofree: 20, socfree: 10, iden: 50, name: "Syndicalism", xcor: 745, ycor: 180},
+{polfree: 10, ecofree: 0, socfree: 0, iden: 50, name: "Council communism", xcor: 695, ycor: 160},
+{polfree: 10, ecofree: 0, socfree: 0, iden: 50, name: "Council communism", xcor: 695, ycor: 160},
+{polfree: 10, ecofree: 5, socfree: 5, iden: 40, name: "Trotskyism", xcor: 735, ycor: 147},
+{polfree: 0, ecofree: 0, socfree: 0, iden: 50, name: "Communism", xcor: 750, ycor: 130},
+{polfree: 0, ecofree: 0, socfree: 0, iden: 10, name: "International socialism", xcor: 745, ycor: 105},
+{polfree: 5, ecofree: 5, socfree: 10, iden: 25, name: "Leninism", xcor: 770, ycor: 112},
+{polfree: 5, ecofree: 10, socfree: 10, iden: 60, name: "Sovietism", xcor: 810, ycor: 125},
+{polfree: 30, ecofree: 30, socfree: 30, iden: 55, name: "Christian democracy", xcor: 825, ycor: 187},
+{polfree: 40, ecofree: 45, socfree: 40, iden: 50, name: "Social republic", xcor: 867, ycor: 225},
+{polfree: 35, ecofree: 45, socfree: 40, iden: 60, name: "Neoconservatism", xcor: 890, ycor: 192},
+{polfree: 20, ecofree: 25, socfree: 25, iden: 50, name: "Marxism", xcor: 860, ycor: 155},
+{polfree: 20, ecofree: 25, socfree: 25, iden: 50, name: "Anti-liberal", xcor: 830, ycor: 105},
+{polfree: 5, ecofree: 5, socfree: 10, iden: 60, name: "Maoism", xcor: 785, ycor: 97},
+{polfree: 0, ecofree: 10, socfree: 5, iden: 70, name: "Stalinism", xcor: 765, ycor: 85},
+{polfree: 0, ecofree: 10, socfree: 10, iden: 75, name: "Jucheism", xcor: 805, ycor: 75},
+{polfree: 0, ecofree: 10, socfree: 0, iden: 90, name: "National socialism", xcor: 785, ycor: 65},
+{polfree: 0, ecofree: 10, socfree: 5, iden: 95, name: "Strasserism", xcor: 815, ycor: 55},
+{polfree: 0, ecofree: 15, socfree: 0, iden: 100, name: "Fascism", xcor: 815, ycor: 35},
+{polfree: 5, ecofree: 15, socfree: 15, iden: 90, name: "Islamo-socialism", xcor: 845, ycor: 70},
+{polfree: 10, ecofree: 20, socfree: 20, iden: 90, name: "Falangism", xcor: 880, ycor: 50},
+{polfree: 15, ecofree: 20, socfree: 20, iden: 60, name: "Democratic socialist authoritarianism", xcor: 885, ycor: 110},
+{polfree: 0, ecofree: 25, socfree: 25, iden: 100, name: "Military junta", xcor: 945, ycor: 35},
+{polfree: 20, ecofree: 25, socfree: 25, iden: 75, name: "Third international", xcor: 922, ycor: 80},
+{polfree: 25, ecofree: 35, socfree: 35, iden: 60, name: "Third position", xcor: 950, ycor: 132},
+{polfree: 20, ecofree: 50, socfree: 50, iden: 80, name: "Third way", xcor: 950, ycor: 242},
+{polfree: 30, ecofree: 50, socfree: 30, iden: 95, name: "Military republic", xcor: 1020, ycor: 35},
+{polfree: 25, ecofree: 50, socfree: 35, iden: 90, name: "Integralism", xcor: 1030, ycor: 80},
+{polfree: 25, ecofree: 65, socfree: 40, iden: 100, name: "Consitutional monarchy", xcor: 1080, ycor: 35},
+{polfree: 35, ecofree: 70, socfree: 40, iden: 100, name: "Putinism", xcor: 1105, ycor: 55},
+{polfree: 40, ecofree: 60, socfree: 50, iden: 90, name: "Timocracy", xcor: 1102, ycor: 80},
+{polfree: 45, ecofree: 60, socfree: 50, iden: 80, name: "Theoconservatism", xcor: 1075, ycor: 105},
+{polfree: 40, ecofree: 70, socfree: 50, iden: 75, name: "Authoritarian capitalism", xcor: 1027, ycor: 107},
+{polfree: 75, ecofree: 75, socfree: 75, iden: 90, name: "Paleoconservatism", xcor: 1097, ycor: 142},
+{polfree: 80, ecofree: 95, socfree: 80, iden: 75, name: "Paleolibertarianism", xcor: 1220, ycor: 345},
+{polfree: 75, ecofree: 75, socfree: 80, iden: 50, name: "Libertarianism", xcor: 1175, ycor: 400},
+{polfree: 60, ecofree: 65, socfree: 65, iden: 75, name: "Conservatism", xcor: 1145, ycor: 275},
+{polfree: 85, ecofree: 85, socfree: 80, iden: 50, name: "Minarchy", xcor: 1270, ycor: 392},
+{polfree: 75, ecofree: 75, socfree: 75, iden: 50, name: "Classical liberalism", xcor: 1120, ycor: 370},
+{polfree: 50, ecofree: 50, socfree: 50, iden: 50, name: "Centrism", xcor: 948, ycor: 355},
+{polfree: 50, ecofree: 65, socfree: 50, iden: 60, name: "Republicanism", xcor: 1067, ycor: 310},
+{polfree: 50, ecofree: 60, socfree: 60, iden: 60, name: "Directory republicanism", xcor: 1067, ycor: 310},
+{polfree: 75, ecofree: 95, socfree: 75, iden: 85, name: "Schuijrenism", xcor: 1187, ycor: 155},
+{polfree: 85, ecofree: 100, socfree: 75, iden: 75, name: "Hoppeanism", xcor: 1270, ycor: 320},
+{polfree: 50, ecofree: 70, socfree: 50, iden: 90, name: "Venizelism", xcor: 1040, ycor: 145},
+{polfree: 35, ecofree: 80, socfree: 50, iden: 75, name: "Thatcherism", xcor: 1170, ycor: 125},
+{polfree: 50, ecofree: 90, socfree: 50, iden: 80, name: "National capitalism", xcor: 1120, ycor: 175},
+{polfree: 60, ecofree: 65, socfree: 50, iden: 90, name: "National conservatism", xcor: 1085, ycor: 230},
+{polfree: 50, ecofree: 60, socfree: 50, iden: 65, name: "Whiggism", xcor: 1000, ycor: 278},
+{polfree: 60, ecofree: 75, socfree: 60, iden: 75, name: "Classical republicanism", xcor: 1178, ycor: 217},
+{polfree: 40, ecofree: 60, socfree: 55, iden: 80, name: "Conservative royalism", xcor: 1042, ycor: 173},
+{polfree: 45, ecofree: 50, socfree: 50, iden: 70, name: "Confederalism", xcor: 997, ycor: 215},
+{polfree: 65, ecofree: 90, socfree: 65, iden: 80, name: "Traditional conservatism", xcor: 1270, ycor: 270},    {polfree: 65, ecofree: 90, socfree: 65, iden: 90, name: "Radical conservatism", xcor: 1270, ycor: 270},
+{polfree: 70, ecofree: 100, socfree: 75, iden: 60, name: "Radical capitalism", xcor: 1230, ycor: 185}, 
 ];
 var percentages = new Array(ideologies.length);
 for (var i = 0; i < ideologies.length; i++) {
-percentages[i] = {percentage: 0, name: "idk"};
+percentages[i] = {percentage: 0, name: "idk", xcor: 0, ycor: 0};
 percentages[i].name = ideologies[i].name;
 percentages[i].percentage = 1-(Math.abs(ideologies[i].polfree-ideology.polfree)+Math.abs(ideologies[i].ecofree-ideology.ecofree)+Math.abs(ideologies[i].socfree-ideology.socfree)+Math.abs(ideologies[i].iden-ideology.iden))/400;
+percentages[i].xcor = ideologies[i].xcor;
+percentages[i].ycor = ideologies[i].ycor;
 percentages.sort(function(a, b){return b.percentage - a.percentage});
 }
 return percentages;
 }
 var closest = matching();
-for (i=0;i<5;i++)
-{
+var closest = matching();
+var margtop=closest[4].ycor;
+var margleft=closest[4].xcor;
+document.querySelector(".five").style.marginTop = margtop+'px';
+document.querySelector(".five").style.marginLeft = margleft+'px';
+var margtop=closest[3].ycor;
+var margleft=closest[3].xcor;
+document.querySelector(".four").style.marginTop = margtop+'px';
+document.querySelector(".four").style.marginLeft = margleft+'px';
+var margtop=closest[2].ycor;
+var margleft=closest[2].xcor;
+document.querySelector(".three").style.marginTop = margtop+'px';
+document.querySelector(".three").style.marginLeft = margleft+'px';
+var margtop=closest[1].ycor;
+var margleft=closest[1].xcor;
+document.querySelector(".two").style.marginTop = margtop+'px';
+document.querySelector(".two").style.marginLeft = margleft+'px';
+var margtop=closest[0].ycor;
+var margleft=closest[0].xcor;
+document.querySelector(".one").style.marginTop = margtop+'px';
+document.querySelector(".one").style.marginLeft = margleft+'px';
+
 document.getElementById("join2").innerHTML = "1. " + (closest[0].percentage*100).toFixed(2) + "% " + closest[0].name + "<br > 2. " + (closest[1].percentage*100).toFixed(2) + "% " + closest[1].name + "<br > 3. " + 
  (closest[2].percentage*100).toFixed(2) + "% " + closest[2].name + "<br > 4. " + (closest[3].percentage*100).toFixed(2) + "% " + closest[3].name + "<br > 5. " + (closest[4].percentage*100).toFixed(2) + "% " + closest[4].name + "<br >";
-}
+
 </script>
 </body>
 </html>
