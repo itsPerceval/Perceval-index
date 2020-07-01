@@ -21,7 +21,6 @@ font-family: "Comic Sans MS", sans-serif;
     .fishes
     {
       position: relative;
-      margin-left: 500px;
       top: 0;
       left: 0;
     }
@@ -118,8 +117,7 @@ font-family: "Comic Sans MS", sans-serif;
 <p id="join"></p>
 <p id="join2"></p>
   <div style="position: relative; left: 0; top: 0;  display: block;
-  margin-left: auto;
-  margin-right: auto;">
+  margin-left: auto;">
     <img src="https://files.catbox.moe/wsctut.png" class="fishes"/>
     <img src="https://files.catbox.moe/wro1gv.png" class="fis"/>
     <img src="https://files.catbox.moe/wro1gv.png" class="fishh"/>
@@ -130,9 +128,9 @@ font-family: "Comic Sans MS", sans-serif;
     <img src="https://files.catbox.moe/tgiy90.png" class="three"/>
     <img src="https://files.catbox.moe/tgiy90.png" class="four"/>
     <img src="https://files.catbox.moe/tgiy90.png" class="five"/>
+    <p>Explanation of the dots:<br>The white dots strictly show your index on each scale.<br>The black dots show your second to fifth closest ideologies.<br>The red dot shows the ideology that is closest to your personal beliefs.<br>The political segments of the octagon are as follows:</p>
+    <img src="https://files.catbox.moe/a1ikaw.png" class="fishes"/>
   </div>
-<p>Explanation of the dots:<br>The white dots strictly show your index on each scale.<br>The black dots show your second to fifth closest ideologies.<br>The red dot shows the ideology that is closest to your personal beliefs.<br>The political segments of the octagon are as follows:</p>
-    <img src="https://files.catbox.moe/a1ikaw.png" class="center"/>
  <script>
 function getUrlVars() {
     var vars = [], hash;
@@ -1416,19 +1414,19 @@ var leftist = 100-(ideology.polfree+ideology.ecofree+ideology.socfree+ideology.i
 var rightist = (ideology.polfree+ideology.ecofree+ideology.socfree+ideology.iden)/4;
 document.getElementById("join").innerHTML = "You are approximately " + leftist.toFixed(2) + "% left-wing, and therefore " + rightist.toFixed(2) + "% right-wing.<br >" + ideology.polfree.toFixed(0) + " political freedom index (naturalism vs statism)<br >" + ideology.ecofree.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >" + ideology.socfree.toFixed(0) + " social freedom index (individualism vs collectivism)<br >" + ideology.iden.toFixed(0) + " identity index (localism vs globalism)<br >";
 var martop=35+6.45*ideology.polfree.toFixed(0);
-var marleft=815+2.68*ideology.polfree.toFixed(0);
+var marleft=815+2.68*ideology.polfree.toFixed(0)-500;
 document.querySelector(".fishh").style.marginTop = martop+'px';
 document.querySelector(".fishh").style.marginLeft = marleft+'px';
 var martop=490-2.65*ideology.ecofree.toFixed(0);
-var marleft=627+6.43*ideology.ecofree.toFixed(0);
+var marleft=627+6.43*ideology.ecofree.toFixed(0)-500;
 document.querySelector(".fi").style.marginTop = martop+'px';
 document.querySelector(".fi").style.marginLeft = marleft+'px';
 var martop=225+2.65*ideology.socfree.toFixed(0);
-var marleft=627+6.43*ideology.socfree.toFixed(0);
+var marleft=627+6.43*ideology.socfree.toFixed(0)-500;
 document.querySelector(".fishhh").style.marginTop = martop+'px';
 document.querySelector(".fishhh").style.marginLeft = marleft+'px';
 var martop=680-6.45*ideology.iden.toFixed(0);
-var marleft=815+2.68*ideology.iden.toFixed(0);
+var marleft=815+2.68*ideology.iden.toFixed(0)-500;
 document.querySelector(".fis").style.marginTop = martop+'px';
 document.querySelector(".fis").style.marginLeft = marleft+'px';
 return ideology;
@@ -1557,29 +1555,28 @@ return percentages;
 var closest = matching();
 var closest = matching();
 var margtop=closest[4].ycor;
-var margleft=closest[4].xcor;
+var margleft=closest[4].xcor-500;
 document.querySelector(".five").style.marginTop = margtop+'px';
 document.querySelector(".five").style.marginLeft = margleft+'px';
 var margtop=closest[3].ycor;
-var margleft=closest[3].xcor;
+var margleft=closest[3].xcor-500;
 document.querySelector(".four").style.marginTop = margtop+'px';
 document.querySelector(".four").style.marginLeft = margleft+'px';
 var margtop=closest[2].ycor;
-var margleft=closest[2].xcor;
+var margleft=closest[2].xcor-500;
 document.querySelector(".three").style.marginTop = margtop+'px';
 document.querySelector(".three").style.marginLeft = margleft+'px';
 var margtop=closest[1].ycor;
-var margleft=closest[1].xcor;
+var margleft=closest[1].xcor-500;
 document.querySelector(".two").style.marginTop = margtop+'px';
 document.querySelector(".two").style.marginLeft = margleft+'px';
 var margtop=closest[0].ycor;
-var margleft=closest[0].xcor;
+var margleft=closest[0].xcor-500;
 document.querySelector(".one").style.marginTop = margtop+'px';
 document.querySelector(".one").style.marginLeft = margleft+'px';
 
 document.getElementById("join2").innerHTML = "1. " + (closest[0].percentage*100).toFixed(2) + "% " + closest[0].name + "<br > 2. " + (closest[1].percentage*100).toFixed(2) + "% " + closest[1].name + "<br > 3. " + 
  (closest[2].percentage*100).toFixed(2) + "% " + closest[2].name + "<br > 4. " + (closest[3].percentage*100).toFixed(2) + "% " + closest[3].name + "<br > 5. " + (closest[4].percentage*100).toFixed(2) + "% " + closest[4].name + "<br >";
-
 </script>
 </body>
 </html>
