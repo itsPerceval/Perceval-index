@@ -16,7 +16,7 @@ font-style: italic;
 p{
 color: white;
 margin-left: 29%;
-font-family: "Comic Sans MS", cursive, sans-serif;
+font-family: "Comic Sans MS", sans-serif;
 }
     .fishes
     {
@@ -74,7 +74,7 @@ font-family: "Comic Sans MS", cursive, sans-serif;
   <div style="position: relative; left: 0; top: 0;  display: block;
   margin-left: auto;
   margin-right: auto;">
-    <img src="https://files.catbox.moe/zhwnws.png" class="fishes"/>
+    <img src="https://files.catbox.moe/wsctut.png" class="fishes"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fish"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fis"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fishh"/>
@@ -82,10 +82,6 @@ font-family: "Comic Sans MS", cursive, sans-serif;
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fishhh"/>
   </div>
 <script>
-var margtop=450;
-var margleft=1270;
-document.querySelector(".fish").style.marginTop = margtop+'px';
-document.querySelector(".fish").style.marginLeft = margleft+'px';
 function getUrlVars() {
     var vars = [], hash;
     var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
@@ -1385,12 +1381,31 @@ document.querySelector(".fis").style.marginTop = martop+'px';
 document.querySelector(".fis").style.marginLeft = marleft+'px';
 return ideology;
 }
+var margtop=680;
+var margleft=930;
+document.querySelector(".fish").style.marginTop = margtop+'px';
+document.querySelector(".fish").style.marginLeft = margleft+'px';
 function matching(){
 var ideology = calculating();
-var ideologies = [{polfree: 100, ecofree: 100, socfree: 100, iden: 50, name: "Anarcho-capitalism", xcor: 1270, ycor: 450},
-{polfree: 100, ecofree: 100, socfree: 100, iden: 25, name: "Anarcho-primitivism"},
-{polfree: 100, ecofree: 100, socfree: 100, iden: 0, name: "Traditional primitivism"},                 
-{polfree: 100, ecofree: 50, socfree: 75, iden: 0, name: "Universalism"},
+var ideologies = [{polfree: 95, ecofree: 100, socfree: 95, iden: 50, name: "Anarcho-capitalism", xcor: 1270, ycor: 450},
+{polfree: 100, ecofree: 100, socfree: 100, iden: 45, name: "Total individualist", xcor: 1270, ycor: 520},
+{polfree: 100, ecofree: 100, socfree: 100, iden: 25, name: "Egoism", xcor: 1200, ycor: 582},
+{polfree: 100, ecofree: 100, socfree: 100, iden: 40, name: "Pirate movement", xcor: 1255, ycor: 560},
+{polfree: 100, ecofree: 100, socfree: 100, iden: 20, name: "Anarcho-primitivism", xcor: 1160, ycor: 608},
+{polfree: 80, ecofree: 80, socfree: 80, iden: 30, name: "Individualist anarchism", xcor: 1165, ycor: 487},
+{polfree: 65, ecofree: 60, socfree: 65, iden: 50, name: "New right", xcor: 1090, ycor: 445},
+{polfree: 70, ecofree: 60, socfree: 65, iden: 50, name: "Meta-right", xcor: 1045, ycor: 465},
+{polfree: 75, ecofree: 60, socfree: 70, iden: 45, name: "Nouvelle droite", xcor: 1075, ycor: 495},
+{polfree: 80, ecofree: 60, socfree: 85, iden: 30, name: "Anarkhia", xcor: 1140, ycor: 530},
+{polfree: 90, ecofree: 60, socfree: 90, iden: 25, name: "Existential anarchy", xcor: 1140, ycor: 573},
+{polfree: 100, ecofree: 70, socfree: 100, iden: 5, name: "Traditional primitivism", xcor: 1120, ycor: 655},
+{polfree: 100, ecofree: 75, socfree: 100, iden: 0, name: "Natural tribalism", xcor: 1050, ycor: 680},
+{polfree: 90, ecofree: 70, socfree: 75, iden: 10, name: "Anarcho-naturism", xcor: 1045, ycor: 640},
+{polfree: 85, ecofree: 70, socfree: 80, iden: 10, name: "Tribal communitarianism", xcor: 1095, ycor: 610},
+{polfree: 75, ecofree: 55, socfree: 70, iden: 25, name: "Archeofuturism", xcor: 1065, ycor: 585},
+{polfree: 70, ecofree: 40, socfree: 60, iden: 45, name: "National anarchism", xcor: 1030, ycor: 530},
+{polfree: 60, ecofree: 45, socfree: 60, iden: 45, name: "Georgism", xcor: 1005, ycor: 495},
+{polfree: 90, ecofree: 15, socfree: 75, iden: 0, name: "Universalism", xcor: 930, ycor: 680},
 {polfree: 90, ecofree: 25, socfree: 50, iden: 0, name: "Communalism"},
 {polfree: 50, ecofree: 0, socfree: 25, iden: 0, name: "Anarcho-communism"},
 {polfree: 50, ecofree: 0, socfree: 25, iden: 75, name: "Anarcho-syndicalism"},
@@ -1405,7 +1420,6 @@ var ideologies = [{polfree: 100, ecofree: 100, socfree: 100, iden: 50, name: "An
 {polfree: 75, ecofree: 75, socfree: 75, iden: 90, name: "Paleoconservatism"},
 {polfree: 80, ecofree: 95, socfree: 80, iden: 75, name: "Paleolibertarianism"},
 {polfree: 75, ecofree: 75, socfree: 80, iden: 50, name: "Libertarianism"},
-{polfree: 25, ecofree: 15, socfree: 50, iden: 75, name: "National anarchism"},
 {polfree: 75, ecofree: 50, socfree: 50, iden: 25, name: "Communitarianism"},
 {polfree: 50, ecofree: 25, socfree: 25, iden: 25, name: "Distributism"},
 {polfree: 50, ecofree: 25, socfree: 50, iden: 25, name: "Social liberalism"},
