@@ -1,1492 +1,578 @@
-<!DOCTYPE html>
 <html>
 <head>
 <meta charset="utf-8">
-<title>Results</title>
+<title>Questionnaire</title>
 <style>
  body {
  background-color: rgb(23, 64, 77);
  }
+/* The container */
+.container {
+display: block;
+position: relative;
+margin-left: 14%;
+margin-bottom: 12px;
+cursor: pointer;
+font-size: 22px;
+color: white;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+position: absolute;
+opacity: 0;
+cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+position: absolute;
+top: 0;
+left: -35px;
+height: 25px;
+width: 25px;
+background-color: #eee;
+border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+background-color: rgb(0, 0, 0);
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+top: 9px;
+left: 9px;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: white;
+}
+.submitter{
+ text-align: center;
+ }
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    height: 100px;
+    width: 400px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 40px;
+    cursor: pointer;
+    border-radius: 12px;
+    justify-content: center;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    top: 50%;
+    }
+.button:hover {
+box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
 h1 {
 color: white;
 text-align: center;
 font: 100px "Times New Roman", Times, serif;
 font-style: italic;
 }
-p{
+h2 {
+text-indent: 10%;
 color: white;
-margin-left: 29%;
-font-family: "Comic Sans MS", sans-serif;
 }
-    .fishes
-    {
-      position: relative;
-      margin-left: 500px;
-      top: 0;
-      left: 0;
-    }
-    .fish
-    {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      height: 20px;
-      width: 20px;
-    }
-        .fis
-    {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      height: 20px;
-      width: 20px;
-    }
-            .fishh
-    {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      height: 20px;
-      width: 20px;
-    }
-            .fi
-    {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      height: 20px;
-      width: 20px;
-    }
-            .fishhh
-    {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      height: 20px;
-      width: 20px;
-    }
 </style>
 </head>
 <body>
-<h1>Your results:</h1>
-<p id="join"></p>
-<p id="join2"></p>
-  <div style="position: relative; left: 0; top: 0;  display: block;
-  margin-left: auto;
-  margin-right: auto;">
-    <img src="https://files.catbox.moe/wsctut.png" class="fishes"/>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fish"/>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fis"/>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fishh"/>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fi"/>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Location_dot_black.svg/64px-Location_dot_black.svg.png" class="fishhh"/>
-  </div>
-<script>
-function getUrlVars() {
-    var vars = [], hash;
-    var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-    for(var i = 0; i < hashes.length; i++) {
-        hash = hashes[i].split('=');
-        vars.push(hash[0]);
-        vars[hash[0]] = hash[1];
-    }
-    return vars;
-}
-function calculating(){
-    var ideology = {polfree: 0, ecofree: 0, socfree: 0, iden: 0};
+<h1>Answer these questions.</h1>
 
-if (getUrlVars()["size"] === "size1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-  
-}
-if (getUrlVars()["size"] === "size2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 25;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["size"] === "size3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 50;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["size"] === "size4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 75;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["size"] === "size5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 100;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["drugs"] === "drugs1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["drugs"] === "drugs2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["drugs"] === "drugs3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["drugs"] === "drugs4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["drugs"] === "drugs5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["guns"] === "guns1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["guns"] === "guns2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["guns"] === "guns3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["guns"] === "guns4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["guns"] === "guns5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["eco"] === "eco1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["eco"] === "eco2") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 25;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["eco"] === "eco3") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 50;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["eco"] === "eco4") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 75;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["eco"] === "eco5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 100;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["elec"] === "elec1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["elec"] === "elec2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["elec"] === "elec3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["elec"] === "elec4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["elec"] === "elec5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["immi"] === "immi1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 100;
-}
-if (getUrlVars()["immi"] === "immi2") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 75;
-}
-if (getUrlVars()["immi"] === "immi3") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 50;
-}
-if (getUrlVars()["immi"] === "immi4") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 25
-}
-if (getUrlVars()["immi"] === "immi5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["abor"] === "abor1") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["abor"] === "abor2") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["abor"] === "abor3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["abor"] === "abor4") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["abor"] === "abor5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["tran"] === "tran1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 100;
-}
-if (getUrlVars()["tran"] === "tran2") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 75;
-}
-if (getUrlVars()["tran"] === "tran3") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 50;
-}
-if (getUrlVars()["tran"] === "tran4") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 25;
-}
-if (getUrlVars()["tran"] === "tran5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["nat"] === "nat1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 100;
-}
-if (getUrlVars()["nat"] === "nat2") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 75;
-}
-if (getUrlVars()["nat"] === "nat3") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 50;
-}
-if (getUrlVars()["nat"] === "nat4") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 25;
-}
-if (getUrlVars()["nat"] === "nat5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["cont"] === "cont1") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["cont"] === "cont2") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["cont"] === "cont3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["cont"] === "cont4") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["cont"] === "cont5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["prov"] === "prov1") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 100;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["prov"] === "prov2") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 75;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["prov"] === "prov3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 50;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["prov"] === "prov4") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 25;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["prov"] === "prov5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["rel"] === "rel1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-if (getUrlVars()["rel"] === "rel2") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 25;
-}
-if (getUrlVars()["rel"] === "rel3") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 50;
-}
-if (getUrlVars()["rel"] === "rel4") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 75;
-}
-if (getUrlVars()["rel"] === "rel5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 100;
-}
-if (getUrlVars()["pris"] === "pris1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
- if (getUrlVars()["pris"] === "pris2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
- if (getUrlVars()["pris"] === "pris3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
- if (getUrlVars()["pris"] === "pris4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
- if (getUrlVars()["pris"] === "pris5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
- if (getUrlVars()["terri"] === "terri1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-  if (getUrlVars()["terri"] === "terri2") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 25;
-}
-  if (getUrlVars()["terri"] === "terri3") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 50;
-}
-  if (getUrlVars()["terri"] === "terri4") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 75;
-}
-  if (getUrlVars()["terri"] === "terri5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 100;
-}
-   if (getUrlVars()["stan"] === "stan1") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-   if (getUrlVars()["stan"] === "stan2") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-   if (getUrlVars()["stan"] === "stan3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-  if (getUrlVars()["stan"] === "stan4") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-   if (getUrlVars()["stan"] === "stan5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-    if (getUrlVars()["fut"] === "fut1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-    if (getUrlVars()["fut"] === "fut2") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 25;
-}
-    if (getUrlVars()["fut"] === "fut3") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 50;
-}
-    if (getUrlVars()["fut"] === "fut4") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 75;
-}
-    if (getUrlVars()["fut"] === "fut5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 100;
-}
-    if (getUrlVars()["str"] === "str1") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["str"] === "str2") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["str"] === "str3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["str"] === "str4") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["str"] === "str5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["nati"] === "nati1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 100;
-}
-     if (getUrlVars()["nati"] === "nati2") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 75;
-}
-     if (getUrlVars()["nati"] === "nati3") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 50;
-}
-     if (getUrlVars()["nati"] === "nati4") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 25;
-}
-     if (getUrlVars()["nati"] === "nati5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["jud"] === "jud1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["jud"] === "jud2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["jud"] === "jud3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["jud"] === "jud4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["jud"] === "jud5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["adop"] === "adop1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 100;
-}
-     if (getUrlVars()["adop"] === "adop2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 75;
-}
-     if (getUrlVars()["adop"] === "adop3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 50;
-}
-     if (getUrlVars()["adop"] === "adop4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 25;
-}
-     if (getUrlVars()["adop"] === "adop5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["cur"] === "cur1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["cur"] === "cur2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 25;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["cur"] === "cur3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 50;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["cur"] === "cur4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 75;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["cur"] === "cur5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 100;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["resp"] === "resp1") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["resp"] === "resp2") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["resp"] === "resp3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["resp"] === "resp4") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["resp"] === "resp5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["cons"] === "cons1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["cons"] === "cons2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["cons"] === "cons3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["cons"] === "cons4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["cons"] === "cons5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["mult"] === "mult1") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 100;
-}
-     if (getUrlVars()["mult"] === "mult2") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 75;
-}
-     if (getUrlVars()["mult"] === "mult3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 50;
-}
-     if (getUrlVars()["mult"] === "mult4") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 25;
-}
-     if (getUrlVars()["mult"] === "mult5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["pun"] === "pun1") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["pun"] === "pun2") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["pun"] === "pun3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["pun"] === "pun4") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["pun"] === "pun5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["cul"] === "cul1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["cul"] === "cul2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 25;
-}
-     if (getUrlVars()["cul"] === "cul3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 50;
-}
-     if (getUrlVars()["cul"] === "cul4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 75;
-}
-     if (getUrlVars()["cul"] === "cul5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 100;
-}
-     if (getUrlVars()["asp"] === "asp1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["asp"] === "asp2") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 25;
-}
-     if (getUrlVars()["asp"] === "asp3") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 50;
-}
-     if (getUrlVars()["asp"] === "asp4") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 75;
-}
-     if (getUrlVars()["asp"] === "asp5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 100;
-}
-     if (getUrlVars()["degr"] === "degr1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 100;
-}
-     if (getUrlVars()["degr"] === "degr2") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 25;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 75;
-}
-     if (getUrlVars()["degr"] === "degr3") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 50;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 50;
-}
-     if (getUrlVars()["degr"] === "degr4") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 75;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 25;
-}
-     if (getUrlVars()["degr"] === "degr5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 100;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["soci"] === "soci1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["soci"] === "soci2") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["soci"] === "soci3") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["soci"] === "soci4") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["soci"] === "soci5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["prot"] === "prot1") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["prot"] === "prot2") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["prot"] === "prot3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["prot"] === "prot4") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["prot"] === "prot5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["goal"] === "goal1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["goal"] === "goal2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 25;
-}
-     if (getUrlVars()["goal"] === "goal3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 50;
-}
-     if (getUrlVars()["goal"] === "goal4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 75;
-}
-     if (getUrlVars()["goal"] === "goal5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 100;
-}
-     if (getUrlVars()["spac"] === "spac1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 100;
-}
-     if (getUrlVars()["spac"] === "spac2") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 75;
-}
-     if (getUrlVars()["spac"] === "spac3") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 50;
-}
-     if (getUrlVars()["spac"] === "spac4") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 25;
-}
-     if (getUrlVars()["spac"] === "spac5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["welf"] === "welf1") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 100;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["welf"] === "welf2") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 75;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["welf"] === "welf3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 50;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["welf"] === "welf4") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 25;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["welf"] === "welf5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["race"] === "race1") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 100;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["race"] === "race2") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 75;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["race"] === "race3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 50;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["race"] === "race4") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 25;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["race"] === "race5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["regu"] === "regu1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["regu"] === "regu2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 25;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["regu"] === "regu3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 50;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["regu"] === "regu4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 75;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["regu"] === "regu5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 100;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["id"] === "id1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["id"] === "id2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["id"] === "id3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["id"] === "id4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["id"] === "id5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["hist"] === "hist1") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["hist"] === "hist2") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 25;
-}
-     if (getUrlVars()["hist"] === "hist3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 50;
-}
-     if (getUrlVars()["hist"] === "hist4") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 75;
-}
-     if (getUrlVars()["hist"] === "hist5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 100;
-}
-     if (getUrlVars()["lgbt"] === "lgbt1") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["lgbt"] === "lgbt2") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["lgbt"] === "lgbt3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["lgbt"] === "lgbt4") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["lgbt"] === "lgbt5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["body"] === "body1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["body"] === "body2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["body"] === "body3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["body"] === "body4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["body"] === "body5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["euth"] === "euth1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["euth"] === "euth2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["euth"] === "euth3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["euth"] === "euth4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["euth"] === "euth5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-      if (getUrlVars()["chang"] === "chang1") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 100;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["chang"] === "chang2") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 75;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["chang"] === "chang3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 50;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["chang"] === "chang4") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 25;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["chang"] === "chang5") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-       if (getUrlVars()["corp"] === "corp1") {
-  ideology.polfree = ideology.polfree + 0;
-  ideology.ecofree = ideology.ecofree + 0;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["corp"] === "corp2") {
-  ideology.polfree = ideology.polfree + 25;
-  ideology.ecofree = ideology.ecofree + 25;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["corp"] === "corp3") {
-  ideology.polfree = ideology.polfree + 50;
-  ideology.ecofree = ideology.ecofree + 50;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["corp"] === "corp4") {
-  ideology.polfree = ideology.polfree + 75;
-  ideology.ecofree = ideology.ecofree + 75;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-     if (getUrlVars()["corp"] === "corp5") {
-  ideology.polfree = ideology.polfree + 100;
-  ideology.ecofree = ideology.ecofree + 100;
-  ideology.socfree = ideology.socfree + 0;
-  ideology.iden = ideology.iden + 0;
-}
-ideology.polfree = ideology.polfree/30
-ideology.ecofree = ideology.ecofree/9
-ideology.socfree = ideology.socfree/25
-ideology.iden = ideology.iden/15
-var leftist = 100-(ideology.polfree+ideology.ecofree+ideology.socfree+ideology.iden)/4;
-var rightist = (ideology.polfree+ideology.ecofree+ideology.socfree+ideology.iden)/4;
-document.getElementById("join").innerHTML = "You are approximately " + leftist.toFixed(2) + "% left-wing, and therefore " + rightist.toFixed(2) + "% right-wing.<br >" + ideology.polfree.toFixed(0) + " political freedom index (naturalism vs statism)<br >" + ideology.ecofree.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >" + ideology.socfree.toFixed(0) + " social freedom index (individualism vs collectivism)<br >" + ideology.iden.toFixed(0) + " identity index (localism vs globalism)<br >";
-var martop=35+6.45*ideology.polfree.toFixed(0);
-var marleft=815+2.68*ideology.polfree.toFixed(0);
-document.querySelector(".fishh").style.marginTop = martop+'px';
-document.querySelector(".fishh").style.marginLeft = marleft+'px';
-var martop=490-2.65*ideology.ecofree.toFixed(0);
-var marleft=627+6.43*ideology.ecofree.toFixed(0);
-document.querySelector(".fi").style.marginTop = martop+'px';
-document.querySelector(".fi").style.marginLeft = marleft+'px';
-var martop=225+2.65*ideology.socfree.toFixed(0);
-var marleft=627+6.43*ideology.socfree.toFixed(0);
-document.querySelector(".fishhh").style.marginTop = martop+'px';
-document.querySelector(".fishhh").style.marginLeft = marleft+'px';
-var martop=680-6.45*ideology.iden.toFixed(0);
-var marleft=815+2.68*ideology.iden.toFixed(0);
-document.querySelector(".fis").style.marginTop = martop+'px';
-document.querySelector(".fis").style.marginLeft = marleft+'px';
-return ideology;
-}
-var margtop=243;
-var margleft=725;
-document.querySelector(".fish").style.marginTop = margtop+'px';
-document.querySelector(".fish").style.marginLeft = margleft+'px';
-function matching(){
-var ideology = calculating();
-var ideologies = [{polfree: 95, ecofree: 100, socfree: 95, iden: 50, name: "Anarcho-capitalism", xcor: 1270, ycor: 450},
-{polfree: 100, ecofree: 100, socfree: 100, iden: 45, name: "Total individualist", xcor: 1270, ycor: 520},
-{polfree: 100, ecofree: 100, socfree: 100, iden: 25, name: "Egoism", xcor: 1200, ycor: 582},
-{polfree: 100, ecofree: 100, socfree: 100, iden: 40, name: "Pirate movement", xcor: 1255, ycor: 560},
-{polfree: 100, ecofree: 100, socfree: 100, iden: 20, name: "Anarcho-primitivism", xcor: 1160, ycor: 608},
-{polfree: 80, ecofree: 80, socfree: 80, iden: 30, name: "Individualist anarchism", xcor: 1165, ycor: 487},
-{polfree: 65, ecofree: 60, socfree: 65, iden: 50, name: "New right", xcor: 1090, ycor: 445},
-{polfree: 70, ecofree: 60, socfree: 65, iden: 50, name: "Meta-right", xcor: 1045, ycor: 465},
-{polfree: 75, ecofree: 60, socfree: 70, iden: 45, name: "Nouvelle droite", xcor: 1075, ycor: 495},
-{polfree: 80, ecofree: 60, socfree: 85, iden: 30, name: "Anarkhia", xcor: 1140, ycor: 530},
-{polfree: 90, ecofree: 60, socfree: 90, iden: 25, name: "Existential anarchy", xcor: 1140, ycor: 573},
-{polfree: 100, ecofree: 70, socfree: 100, iden: 5, name: "Traditional primitivism", xcor: 1120, ycor: 655},
-{polfree: 100, ecofree: 75, socfree: 100, iden: 0, name: "Natural tribalism", xcor: 1050, ycor: 680},
-{polfree: 90, ecofree: 70, socfree: 75, iden: 10, name: "Anarcho-naturism", xcor: 1045, ycor: 640},
-{polfree: 85, ecofree: 70, socfree: 80, iden: 10, name: "Tribal communitarianism", xcor: 1095, ycor: 610},
-{polfree: 75, ecofree: 55, socfree: 70, iden: 25, name: "Archeofuturism", xcor: 1065, ycor: 585},
-{polfree: 70, ecofree: 40, socfree: 60, iden: 45, name: "National anarchism", xcor: 1030, ycor: 530},
-{polfree: 60, ecofree: 45, socfree: 60, iden: 45, name: "Georgism", xcor: 1005, ycor: 495},
-{polfree: 90, ecofree: 15, socfree: 75, iden: 0, name: "Universalism", xcor: 930, ycor: 680},
-{polfree: 80, ecofree: 25, socfree: 70, iden: 10, name: "Synthesism", xcor: 945, ycor: 613},
-{polfree: 90, ecofree: 10, socfree: 50, iden: 0, name: "Communalism", xcor: 800, ycor: 655},
-{polfree: 85, ecofree: 10, socfree: 50, iden: 10, name: "Post-anarchism", xcor: 795, ycor: 612},
-{polfree: 75, ecofree: 10, socfree: 50, iden: 10, name: "Social anarchism", xcor: 885, ycor: 585},
-{polfree: 60, ecofree: 25, socfree: 50, iden: 25, name: "Eco-socialism", xcor: 900, ycor: 520},
-{polfree: 60, ecofree: 40, socfree: 50, iden: 35, name: "Ochlocracy", xcor: 880, ycor: 487},
-{polfree: 60, ecofree: 50, socfree: 50, iden: 45, name: "Direct democracy", xcor: 950, ycor: 450},
-{polfree: 60, ecofree: 10, socfree: 25, iden: 20, name: "Distributism", xcor: 810, ycor: 545},
-{polfree: 50, ecofree: 0, socfree: 40, iden: 0, name: "Anarcho-communism", xcor: 730, ycor: 595},
-{polfree: 50, ecofree: 0, socfree: 25, iden: 20, name: "Autonomism", xcor: 670, ycor: 533},
-{polfree: 50, ecofree: 25, socfree: 35, iden: 25, name: "Revolutionary socialism", xcor: 770, ycor: 500},
-{polfree: 45, ecofree: 10, socfree: 25, iden: 25, name: "Situationalism", xcor: 720, ycor: 465},
-{polfree: 45, ecofree: 0, socfree: 10, iden: 25, name: "Anarcho-syndicalism", xcor: 627, ycor: 465},
-{polfree: 40, ecofree: 10, socfree: 10, iden: 30, name: "Mutualism", xcor: 705, ycor: 430},
-{polfree: 40, ecofree: 25, socfree: 30, iden: 35, name: "Social liberalism", xcor: 820, ycor: 426},
-{polfree: 50, ecofree: 45, socfree: 45, iden: 45, name: "Democracy", xcor: 840, ycor: 387},
-{polfree: 40, ecofree: 25, socfree: 25, iden: 40, name: "Democratic socialism", xcor: 730, ycor: 393},
-{polfree: 20, ecofree: 0, socfree: 0, iden: 20, name: "Utopian socialism", xcor: 627, ycor: 400},
-{polfree: 20, ecofree: 5, socfree: 5, iden: 40, name: "Labour unionism", xcor: 665, ycor: 342},
-{polfree: 35, ecofree: 25, socfree: 25, iden: 40, name: "Jacobinism", xcor: 745, ycor: 360},
-{polfree: 35, ecofree: 35, socfree: 40, iden: 40, name: "Liberal socialism", xcor: 800, ycor: 350},
-{polfree: 30, ecofree: 35, socfree: 35, iden: 40, name: "Modern liberalism", xcor: 785, ycor: 325},
-{polfree: 25, ecofree: 25, socfree: 20, iden: 45, name: "Revisionist marxism", xcor: 730, ycor: 305},
-{polfree: 20, ecofree: 10, socfree: 0, iden: 45, name: "Progressivism", xcor: 650, ycor: 270},
-{polfree: 15, ecofree: 0, socfree: 0, iden: 45, name: "Social corporatism", xcor: 627, ycor: 225},
-{polfree: 40, ecofree: 45, socfree: 40, iden: 55, name: "Popular democracy", xcor: 853, ycor: 305},
-{polfree: 30, ecofree: 40, socfree: 25, iden: 55, name: "Radical democracy", xcor: 770, ycor: 277},
-{polfree: 25, ecofree: 25, socfree: 15, iden: 60, name: "Labour movement", xcor: 725, ycor: 243},
+<form action="https://itsperceval.github.io/Perceval-index/results.html" onsubmit="ideology()">
+<h2>1. What size would your ideal government have?</h2>
+<label class="container" for="size1">Maximum size.<input type="radio" id="size1" name="size" value="size1"><span class="checkmark"></span></label><br>
 
-{polfree: 0, ecofree: 0, socfree: 0, iden: 25, name: "Communism"},
-{polfree: 0, ecofree: 0, socfree: 0, iden: 100, name: "National socialism"},
-{polfree: 0, ecofree: 25, socfree: 0, iden: 100, name: "Authoritarian-left"},
-{polfree: 0, ecofree: 25, socfree: 25, iden: 100, name: "Military junta"},
-{polfree: 0, ecofree: 50, socfree: 25, iden: 100, name: "Authoritarian-right"},
-{polfree: 75, ecofree: 75, socfree: 75, iden: 90, name: "Paleoconservatism"},
-{polfree: 80, ecofree: 95, socfree: 80, iden: 75, name: "Paleolibertarianism"},
-{polfree: 75, ecofree: 75, socfree: 80, iden: 50, name: "Libertarianism"},
-{polfree: 75, ecofree: 50, socfree: 50, iden: 25, name: "Communitarianism"},
-{polfree: 25, ecofree: 25, socfree: 25, iden: 50, name: "Syndicalism"},
-{polfree: 25, ecofree: 25, socfree: 25, iden: 50, name: "Socialism"},
-{polfree: 0, ecofree: 25, socfree: 25, iden: 20, name: "Marxism"},
-{polfree: 60, ecofree: 65, socfree: 65, iden: 75, name: "Conservatism"},
-{polfree: 85, ecofree: 85, socfree: 80, iden: 50, name: "Minarchy"},
-{polfree: 75, ecofree: 75, socfree: 75, iden: 50, name: "Classical liberalism"},
-{polfree: 50, ecofree: 50, socfree: 50, iden: 50, name: "Centrism"},
-{polfree: 50, ecofree: 65, socfree: 50, iden: 60, name: "Republicanism"},
-{polfree: 50, ecofree: 60, socfree: 60, iden: 60, name: "Directory republicanism"},
-{polfree: 25, ecofree: 50, socfree: 25, iden: 50, name: "Social democracy"},
-{polfree: 20, ecofree: 50, socfree: 50, iden: 80, name: "Third way"},
-{polfree: 25, ecofree: 50, socfree: 50, iden: 75, name: "Synarchism"},
-{polfree: 25, ecofree: 25, socfree: 25, iden: 75, name: "Third position"},
-{polfree: 75, ecofree: 95, socfree: 75, iden: 85, name: "Schuijrenism"},
-{polfree: 85, ecofree: 100, socfree: 75, iden: 75, name: "Hoppeanism"},
-{polfree: 50, ecofree: 70, socfree: 50, iden: 90, name: "Venizelism"},
-{polfree: 25, ecofree: 85, socfree: 50, iden: 70, name: "Pinochetism"},
-{polfree: 25, ecofree: 75, socfree: 50, iden: 100, name: "Consitutional monarchy"},
-{polfree: 35, ecofree: 80, socfree: 50, iden: 75, name: "Thatcherism"},
-{polfree: 25, ecofree: 50, socfree: 50, iden: 90, name: "Integralism"},
-{polfree: 50, ecofree: 90, socfree: 50, iden: 80, name: "National capitalism"},
-{polfree: 60, ecofree: 65, socfree: 50, iden: 90, name: "National conservatism"},
-{polfree: 50, ecofree: 60, socfree: 50, iden: 65, name: "Whiggism"},
-{polfree: 60, ecofree: 75, socfree: 60, iden: 75, name: "Classical republicanism"},
-{polfree: 40, ecofree: 60, socfree: 55, iden: 80, name: "Conservative royalism"},
-{polfree: 45, ecofree: 50, socfree: 50, iden: 70, name: "Confederalism"},
-{polfree: 65, ecofree: 90, socfree: 65, iden: 80, name: "Traditional conservatism"},                  
-];
-var percentages = new Array(ideologies.length);
-for (var i = 0; i < ideologies.length; i++) {
-percentages[i] = {percentage: 0, name: "idk"};
-percentages[i].name = ideologies[i].name;
-percentages[i].percentage = 1-(Math.abs(ideologies[i].polfree-ideology.polfree)+Math.abs(ideologies[i].ecofree-ideology.ecofree)+Math.abs(ideologies[i].socfree-ideology.socfree)+Math.abs(ideologies[i].iden-ideology.iden))/400;
-percentages.sort(function(a, b){return b.percentage - a.percentage});
-}
-return percentages;
-}
-var closest = matching();
-for (i=0;i<5;i++)
-{
-document.getElementById("join2").innerHTML = "1. " + (closest[0].percentage*100).toFixed(2) + "% " + closest[0].name + "<br > 2. " + (closest[1].percentage*100).toFixed(2) + "% " + closest[1].name + "<br > 3. " + 
- (closest[2].percentage*100).toFixed(2) + "% " + closest[2].name + "<br > 4. " + (closest[3].percentage*100).toFixed(2) + "% " + closest[3].name + "<br > 5. " + (closest[4].percentage*100).toFixed(2) + "% " + closest[4].name + "<br >";
-}
-</script>
+<label class="container" for="size2">Rather large.<input type="radio" id="size2" name="size" value="size2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="size3">Preferably small.<input type="radio" id="size3" name="size" value="size3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="size4">Minimum size.<input type="radio" id="size4" name="size" value="size4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="size5">No government.<input type="radio" id="size5" name="size" value="size5"><span class="checkmark"></span></label><br>
+<br>
+<h2>2. What is your policy on drugs?</h2>
+<label class="container" for="drugs1">All drugs are illegal.<input type="radio" id="drugs1" name="drugs" value="drugs1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="drugs2">Soft drugs are legal with some limits, hard drugs are criminalized.<input type="radio" id="drugs2" name="drugs" value="drugs2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="drugs3">Soft drugs are legal, hard drugs are prohibited but usage is no criminal offense.<input type="radio" id="drugs3" name="drugs" value="drugs3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="drugs4">Soft drugs are legal, hard drugs are legal with limits.<input type="radio" id="drugs4" name="drugs" value="drugs4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="drugs5">All drugs are completely legalized.<input type="radio" id="drugs5" name="drugs" value="drugs5"><span class="checkmark"></span></label><br>
+<br>
+<h2>3. What is your policy on guns?</h2>
+<label class="container" for="guns1">No citizen is allowed to own a gun.<input type="radio" id="guns1" name="guns" value="guns1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="guns2">Buying age, licensing and background checks are tightly controlled, no assault guns are allowed.<input type="radio" id="guns2" name="guns" value="guns2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="guns3">Buying age, licensing and background checks are tightly controlled.<input type="radio" id="guns3" name="guns" value="guns3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="guns4">There is a relaxed control on age, licensing and background checks.<input type="radio" id="guns4" name="guns" value="guns4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="guns5">There is no gun control.<input type="radio" id="guns5" name="guns" value="guns5"><span class="checkmark"></span></label><br>
+<br>
+<h2>4. What is your ideal economical system?</h2>
+<label class="container" for="eco1">Pure socialism.<input type="radio" id="eco1" name="eco" value="eco1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="eco2">Smaller form of socialism with private property.<input type="radio" id="eco2" name="eco" value="eco2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="eco3">Mixed economy (corporatism).<input type="radio" id="eco3" name="eco" value="eco3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="eco4">Moderate form of capitalism with a social market.<input type="radio" id="eco4" name="eco" value="eco4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="eco5">Free market capitalism.<input type="radio" id="eco5" name="eco" value="eco5"><span class="checkmark"></span></label><br>
+<br>
+<h2>5. What election system do you desire?</h2>
+<label class="container" for="elec1">The leader is predestined (autocracy).<input type="radio" id="elec1" name="elec" value="elec1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="elec2">Election by landowners and the wealthy (plutocracy).<input type="radio" id="elec2" name="elec" value="elec2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="elec3">Election by the well-educated citizens (meritocracy).<input type="radio" id="elec3" name="elec" value="elec3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="elec4">Election by all citizens (democracy).<input type="radio" id="elec4" name="elec" value="elec4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="elec5">No elections (anarchy).<input type="radio" id="elec5" name="elec" value="elec5"><span class="checkmark"></span></label><br>
+<br>
+<h2>6. What is your policy on immigration?</h2>
+<label class="container" for="immi1">Minimal to no immigration.<input type="radio" id="immi1" name="immi" value="immi1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="immi2">Educational and cultural merit-based immigration.<input type="radio" id="immi2" name="immi" value="immi2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="immi3">Educational merit-based immigration.<input type="radio" id="immi3" name="immi" value="immi3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="immi4">Quota-based immigration.<input type="radio" id="immi4" name="immi" value="immi4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="immi5">Unrestricted immigration.<input type="radio" id="immi5" name="immi" value="immi5"><span class="checkmark"></span></label><br>
+<br>
+<h2>7. When is abortion legal?</h2>
+<label class="container" for="abor1">Never.<input type="radio" id="abor1" name="abor" value="abor1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="abor2">When a life is in danger.<input type="radio" id="abor2" name="abor" value="abor2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="abor3">Rape and above.<input type="radio" id="abor3" name="abor" value="abor3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="abor4">Birth defects and above.<input type="radio" id="abor4" name="abor" value="abor4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="abor5">Convenience and above.<input type="radio" id="abor5" name="abor" value="abor5"><span class="checkmark"></span></label><br>
+<br>
+<h2>8. What are your views on transgenderism?</h2>
+<label class="container" for="tran1">Gender dysphoria is a disorder, therapy is the only solution for complications.<input type="radio" id="tran1" name="tran" value="tran1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="tran2">Therapy is the usual solution for complications, medical treatment is a last resort.<input type="radio" id="tran2" name="tran" value="tran2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="tran3">Therapy is the usual solution for complications, medical treatment is decided by the individual.<input type="radio" id="tran3" name="tran" value="tran3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="tran4">The solution for complications is decided by the individual after a certain age.<input type="radio" id="tran4" name="tran" value="tran4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="tran5">Gender is a social construct.<input type="radio" id="tran5" name="tran" value="tran5"><span class="checkmark"></span></label><br>
+<br>
+<h2>9. What sort of nationalist are you?</h2>
+<label class="container" for="nat1">Ethnic nationalist and below.<input type="radio" id="nat1" name="nat" value="nat1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="nat2">Religious nationalist and below.<input type="radio" id="nat2" name="nat" value="nat2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="nat3">Cultural nationalist and below.<input type="radio" id="nat3" name="nat" value="nat3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="nat4">Civic nationalist.<input type="radio" id="nat4" name="nat" value="nat4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="nat5">Nationalism is completely rejected.<input type="radio" id="nat5" name="nat" value="nat5"><span class="checkmark"></span></label><br>
+<br>
+<h2>10. Which social contract do citizens hold to one another?</h2>
+<label class="container" for="cont1">Absolutely nothing (egoism).<input type="radio" id="cont1" name="cont" value="cont1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cont2">Citizens should seek to help each other out (paternalism).<input type="radio" id="cont2" name="cont" value="cont2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cont3">Citizens are bound and united by culture (populism).<input type="radio" id="cont3" name="cont" value="cont3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cont4">Citizens are like a family.<input type="radio" id="cont4" name="cont" value="cont4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cont5">Citizens are like a bundle of sticks (fascism).<input type="radio" id="cont5" name="cont" value="cont5"><span class="checkmark"></span></label><br>
+<br>
+<h2>11. What should the government provide?</h2>
+<label class="container" for="prov1">Nothing.<input type="radio" id="prov1" name="prov" value="prov1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="prov2">Law and order, national security and infrastructure.<input type="radio" id="prov2" name="prov" value="prov2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="prov3">Education for all and above.<input type="radio" id="prov3" name="prov" value="prov3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="prov4">Healthcare for all and above.<input type="radio" id="prov4" name="prov" value="prov4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="prov5">Housing for all and above.<input type="radio" id="prov5" name="prov" value="prov5"><span class="checkmark"></span></label><br>
+<br>
+<h2>12. How important is religious freedom?</h2>
+<label class="container" for="rel1">Total freedom of religion and beliefs is granted and preserved.<input type="radio" id="rel1" name="rel" value="rel1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="rel2">Foreign religion or beliefs are valued.<input type="radio" id="rel2" name="rel" value="rel2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="rel3">Foreign religion and beliefs are tolerated.<input type="radio" id="rel3" name="rel" value="rel3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="rel4">Little freedom or access to religion or beliefs other than what is state endorsed.<input type="radio" id="rel4" name="rel" value="rel4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="rel5">No freedom of religion or belief other than what is state mandated.<input type="radio" id="rel5" name="rel" value="rel5"><span class="checkmark"></span></label><br>
+<br>
+<h2>13. What is your preferred penal system?</h2>
+<label class="container" for="pris1">State-run labour camps and prison.<input type="radio" id="pris1" name="pris" value="pris1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="pris2">Centralized state prison system with labour camps.<input type="radio" id="pris2" name="pris" value="pris2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="pris3">State-endorsed prison system.<input type="radio" id="pris3" name="pris" value="pris3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="pris4">Privatized jails or labour camps.<input type="radio" id="pris4" name="pris" value="pris4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="pris5">Focus on deportation rather than prisons.<input type="radio" id="pris5" name="pris" value="pris5"><span class="checkmark"></span></label><br>
+<br>
+<h2>14. What is your approach to the country's territory?</h2>
+<label class="container" for="terri1">Conquering more territory is desired.<input type="radio" id="terri1" name="terri" value="terri1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="terri2">Making expansionary territory deals with foreign nations is considerable.<input type="radio" id="terri2" name="terri" value="terri2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="terri3">The country's territory is not important and is not particularly defended.<input type="radio" id="terri3" name="terri" value="terri3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="terri4">The country's territory should not change, the borders are defended in case of threat.<input type="radio" id="terri4" name="terri" value="terri4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="terri5">The country's territory should not change, the borders are strongly defended.<input type="radio" id="terri5" name="terri" value="terri5"><span class="checkmark"></span></label><br>
+<br>
+<h2>15. What is your approach to polarizing or antithetical political ideologies?</h2>
+<label class="container" for="stan1">Nothing in particular.<input type="radio" id="stan1" name="stan" value="stan1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="stan2">Allowed but not enabled.<input type="radio" id="stan2" name="stan" value="stan2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="stan3">Political mobilization and organization is prohibited.<input type="radio" id="stan3" name="stan" value="stan3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="stan4">Blacklisted, outlawed and physical removal (expulsion).<input type="radio" id="stan4" name="stan" value="stan4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="stan5">Banned and possible execution.<input type="radio" id="stan5" name="stan" value="stan5"><span class="checkmark"></span></label><br>
+<br>
+<h2>16. What is your approach to transhumanism?</h2>
+<label class="container" for="fut1">It should be accelerated.<input type="radio" id="fut1" name="fut" value="fut1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="fut2">It should be embraced and advocated for.<input type="radio" id="fut2" name="fut" value="fut2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="fut3">Neutral stance.<input type="radio" id="fut3" name="fut" value="fut3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="fut4">It should be considered with suspicion.<input type="radio" id="fut4" name="fut" value="fut4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="fut5">It should be rejected.<input type="radio" id="fut5" name="fut" value="fut5"><span class="checkmark"></span></label><br>
+<br>
+<h2>17. How strong should the government be?</h2>
+<label class="container" for="str1">No role.<input type="radio" id="str1" name="str" value="str1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="str2">Limited government.<input type="radio" id="str2" name="str" value="str2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="str3">Moderate government.<input type="radio" id="str3" name="str" value="str3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="str4">Strong government.<input type="radio" id="str4" name="str" value="str4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="str5">Authoritarian government.<input type="radio" id="str5" name="str" value="str5"><span class="checkmark"></span></label><br>
+<br>
+<h2>18. What does your nationality mean to you?</h2>
+<label class="container" for="nati1">My nationality defines who I am.<input type="radio" id="nati1" name="nati" value="nati1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="nati2">My nationality is part of what identifies me.<input type="radio" id="nati2" name="nati" value="nati2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="nati3">I have mixed feelings about nationality.<input type="radio" id="nati3" name="nati" value="nati3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="nati4">I am indifferent about my nationality.<input type="radio" id="nati4" name="nati" value="nati4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="nati5">My nationality does not define who I am as an individual.<input type="radio" id="nati5" name="nati" value="nati5"><span class="checkmark"></span></label><br>
+<br>
+<h2>19. How would you determine the Judicary?</h2>
+<label class="container" for="jud1">Judges are appointed for life.<input type="radio" id="jud1" name="jud" value="jud1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="jud2">Judges are appointed until possibly removed.<input type="radio" id="jud2" name="jud" value="jud2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="jud3">Judges are elected for a specific term.<input type="radio" id="jud3" name="jud" value="jud3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="jud4">Judges are elected until potentially removed.<input type="radio" id="jud4" name="jud" value="jud4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="jud5">The government does not instruct or uphold the courts.<input type="radio" id="jud5" name="jud" value="jud5"><span class="checkmark"></span></label><br>
+<br>
+<h2>20. What are restrictions for adoption?</h2>
+<label class="container" for="adop1">Adopted children are placed in a stable nuclear family organised by a locality.<input type="radio" id="adop1" name="adop" value="adop1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="adop2">Adoption is enabled only through severe checks and balances with restrictions.<input type="radio" id="adop2" name="adop" value="adop2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="adop3">Adoption is enabled through limited checks and balances with restrictions.<input type="radio" id="adop3" name="adop" value="adop3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="adop4">Adoption is enabled to any willing home or potential family.<input type="radio" id="adop4" name="adop" value="adop4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="adop5">Unrestricted limitations to adoption.<input type="radio" id="adop5" name="adop" value="adop5"><span class="checkmark"></span></label><br>
+<br>
+<h2>21. How is the currency controlled by the government?</h2>
+<label class="container" for="cur1">The government controls the central bank and interest rate.<input type="radio" id="cur1" name="cur" value="cur1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cur2">The government decides the money supply by loaning from the central bank.<input type="radio" id="cur2" name="cur" value="cur2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cur3">The government has no control on the money supply and the interest rate is decided by the central bank.<input type="radio" id="cur3" name="cur" value="cur3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cur4">There is one national currency and no central bank.<input type="radio" id="cur4" name="cur" value="cur4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cur5">There is no central bank and private money is allowed.<input type="radio" id="cur5" name="cur" value="cur5"><span class="checkmark"></span></label><br>
+<br>
+<h2>22. What responsibilities does the government have?</h2>
+<label class="container" for="resp1">The government has no responsibilities.<input type="radio" id="resp1" name="resp" value="resp1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="resp2">It is responsible for law and order.<input type="radio" id="resp2" name="resp" value="resp2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="resp3">It is responsible for national security and above.<input type="radio" id="resp3" name="resp" value="resp3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="resp4">It is responsible for financial stability of poor citizens and above.<input type="radio" id="resp4" name="resp" value="resp4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="resp5">It is responsible for everything regarding its citizens.<input type="radio" id="resp5" name="resp" value="resp5"><span class="checkmark"></span></label><br>
+<br>
+<h2>23. How is the constitution dictated?</h2>
+<label class="container" for="cons1">By one person (dictator).<input type="radio" id="cons1" name="cons" value="cons1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cons2">By a group of unelected people or state officials (bureaucracy).<input type="radio" id="cons2" name="cons" value="cons2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cons3">By popular opinion or everyone (direct democracy).<input type="radio" id="cons3" name="cons" value="cons3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cons4">By a council of elected representatives (republicanist).<input type="radio" id="cons4" name="cons" value="cons4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cons5">By voluntary involvement, non-aggression principle.<input type="radio" id="cons5" name="cons" value="cons5"><span class="checkmark"></span></label><br>
+<br>
+<h2>24. What are your views on multilateralism?</h2>
+<label class="container" for="mult1">International associations are rejected.<input type="radio" id="mult1" name="mult" value="mult1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="mult2">International associations are limited.<input type="radio" id="mult2" name="mult" value="mult2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="mult3">International agreements are openly approached.<input type="radio" id="mult3" name="mult" value="mult3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="mult4">Multilateral associations are joined for internationalism's sake.<input type="radio" id="mult4" name="mult" value="mult4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="mult5">Cosmopolitanism.<input type="radio" id="mult5" name="mult" value="mult5"><span class="checkmark"></span></label><br>
+<br>
+<h2>25. How severe should capital punishment be?</h2>
+<label class="container" for="pun1">Capital punishment is rejected while the focus is on sentencing and rehabilitation.<input type="radio" id="pun1" name="pun" value="pun1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="pun2">The focus is on sentencing and rehabilitation with possibility for capital punishment.<input type="radio" id="pun2" name="pun" value="pun2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="pun3">Prison sentencing includes some capital punishment, but no rehabilitation.<input type="radio" id="pun3" name="pun" value="pun3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="pun4">The focus is on life sentencing with optional capital punishment.<input type="radio" id="pun4" name="pun" value="pun4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="pun5">The focus is on the death penalty.<input type="radio" id="pun5" name="pun" value="pun5"><span class="checkmark"></span></label><br>
+<br>
+<h2>26. What is your approach to culture?</h2>
+<label class="container" for="cul1">Culture can change regardless or is ignored.<input type="radio" id="cul1" name="cul" value="cul1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cul2">Culture isn't important, indifferent approach (cosmopolitanism).<input type="radio" id="cul2" name="cul" value="cul2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cul3">Culture should be accepted (multiculturalism).<input type="radio" id="cul3" name="cul" value="cul3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cul4">Culture should be respected (monoculturalism).<input type="radio" id="cul4" name="cul" value="cul4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="cul5">Culture should to bemaintained and preserved (nativism).<input type="radio" id="cul5" name="cul" value="cul5"><span class="checkmark"></span></label><br>
+<br>
+<h2>27. What aspects of culture are important?</h2>
+<label class="container" for="asp1">Our traditions (values and customs).<input type="radio" id="asp1" name="asp" value="asp1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="asp2">Our religion with social principles and above.<input type="radio" id="asp2" name="asp" value="asp2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="asp3">Our language with history and above.<input type="radio" id="asp3" name="asp" value="asp3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="asp4">Our arts with heritage and above.<input type="radio" id="asp4" name="asp" value="asp4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="asp5">Our cuisine with trade and above.<input type="radio" id="asp5" name="asp" value="asp5"><span class="checkmark"></span></label><br>
+<br>
+<h2>28. What degree of economic internationalism do you advocate for?</h2>
+<label class="container" for="degr1">Isolationism, autarky.<input type="radio" id="degr1" name="degr" value="degr1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="degr2">Trading or exchanging of goods with other countries.<input type="radio" id="degr2" name="degr" value="degr2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="degr3">Doing business inside other countries and above (offshoring).<input type="radio" id="degr3" name="degr" value="degr3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="degr4">Allowing migration as a means of increasing workforce and above.<input type="radio" id="degr4" name="degr" value="degr4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="degr5">Allowing complete free trade with no tarriffs and above.<input type="radio" id="degr5" name="degr" value="degr5"><span class="checkmark"></span></label><br>
+<br>
+<h2>29. What kind of control does the government have over social and private life?</h2>
+<label class="container" for="soci1">No control.<input type="radio" id="soci1" name="soci" value="soci1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="soci2">Adherence to social regulations and rules with certain limits.<input type="radio" id="soci2" name="soci" value="soci2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="soci3">Public surveillance and monitoring with certain limits.<input type="radio" id="soci3" name="soci" value="soci3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="soci4">Accessing online activity and recording communications.<input type="radio" id="soci4" name="soci" value="soci4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="soci5">Completely monitored.<input type="radio" id="soci5" name="soci" value="soci5"><span class="checkmark"></span></label><br>
+<br>
+<h2>30. To what degree should the government protect its citizens?</h2>
+<label class="container" for="prot1">None or national protection with militia or military.<input type="radio" id="prot1" name="prot" value="prot1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="prot2">Border protection including national guard (army).<input type="radio" id="prot2" name="prot" value="prot2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="prot3">Protection from disaster with rescue services.<input type="radio" id="prot3" name="prot" value="prot3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="prot4">Pre-emptive protection from crime by law, such as banning guns.<input type="radio" id="prot4" name="prot" value="prot4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="prot5">Spying on its citizens to detect terrorism.<input type="radio" id="prot5" name="prot" value="prot5"><span class="checkmark"></span></label><br>
+<br>
+<h2>31. What is the goal of humanity?</h2>
+<label class="container" for="goal1">World government.<input type="radio" id="goal1" name="goal" value="goal1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="goal2">Very few multilateral superpowers.<input type="radio" id="goal2" name="goal" value="goal2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="goal3">No more wars.<input type="radio" id="goal3" name="goal" value="goal3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="goal4">(Almost) every country taking part in the economic world order.<input type="radio" id="goal4" name="goal" value="goal4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="goal5">Every sovereign country deciding its own fate.<input type="radio" id="goal5" name="goal" value="goal5"><span class="checkmark"></span></label><br>
+<br>
+<h2>32. What is your approach to space?</h2>
+<label class="container" for="spac1">Disinterest in space advocacy (unneccessary external exploits).<input type="radio" id="spac1" name="spac" value="spac1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="spac2">Space travel for the sake of improving scientific knowledge.<input type="radio" id="spac2" name="spac" value="spac2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="spac3">Space travel for technological advancements via outer space.<input type="radio" id="spac3" name="spac" value="spac3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="spac4">Space travel for exploration of outer space.<input type="radio" id="spac4" name="spac" value="spac4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="spac5">Space travel for colonization of outer space.<input type="radio" id="spac5" name="spac" value="spac5"><span class="checkmark"></span></label><br>
+<br>
+<h2>33. What form of welfare are citizens granted?</h2>
+<label class="container" for="welf1">None, to each their own.<input type="radio" id="welf1" name="welf" value="welf1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="welf2">Lower taxation for poor people.<input type="radio" id="welf2" name="welf" value="welf2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="welf3">Additional benefits for poorer citizens.<input type="radio" id="welf3" name="welf" value="welf3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="welf4">Universal basic income.<input type="radio" id="welf4" name="welf" value="welf4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="welf5">Complete redistribution of wealth.<input type="radio" id="welf5" name="welf" value="welf5"><span class="checkmark"></span></label><br>
+<br>
+<h2>34. How important is race?</h2>
+<label class="container" for="race1">Every skin colour is equal.<input type="radio" id="race1" name="race" value="race1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="race2">Certain races get benefits, such as CEO positions.<input type="radio" id="race2" name="race" value="race2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="race3">Races need to be segregated.<input type="radio" id="race3" name="race" value="race3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="race4">Deport certain races.<input type="radio" id="race4" name="race" value="race4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="race5">Genocide certain races.<input type="radio" id="race5" name="race" value="race5"><span class="checkmark"></span></label><br>
+<br>
+<h2>35. Who regulates the economy?</h2>
+<label class="container" for="regu1">Only the government.<input type="radio" id="regu1" name="regu" value="regu1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="regu2">Both the government and a government-approved private sector.<input type="radio" id="regu2" name="regu" value="regu2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="regu3">The government and an independent private sector.<input type="radio" id="regu3" name="regu" value="regu3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="regu4">Only the private sector.<input type="radio" id="regu4" name="regu" value="regu4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="regu5">No regulation.<input type="radio" id="regu5" name="regu" value="regu5"><span class="checkmark"></span></label><br>
+<br>
+<h2>36. What is your approach to ID's?</h2>
+<label class="container" for="id1">Mandated and required to be held at all times.<input type="radio" id="id1" name="id" value="id1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="id2">Mandated but only required in certain situations, such as having committed a crime or buying alcohol.<input type="radio" id="id2" name="id" value="id2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="id3">Mandated to be registered but not required to be held.<input type="radio" id="id3" name="id" value="id3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="id4">Optional to be registered.<input type="radio" id="id4" name="id" value="id4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="id5">There are no ID's.<input type="radio" id="id5" name="id" value="id5"><span class="checkmark"></span></label><br>
+<br>
+<h2>37. How is the country's history taught?</h2>
+<label class="container" for="hist1">The country's history is erased.<input type="radio" id="hist1" name="hist" value="hist1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="hist2">The country's history is primarily linked to other countries' history.<input type="radio" id="hist2" name="hist" value="hist2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="hist3">Neutral stance on country's history.<input type="radio" id="hist3" name="hist" value="hist3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="hist4">Opportunities to learn the country's history are enabled.<input type="radio" id="hist4" name="hist" value="hist4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="hist5">Learning about the country's history is heavily advocated for.<input type="radio" id="hist5" name="hist" value="hist5"><span class="checkmark"></span></label><br>
+<br>
+<h2>38. How are members of the LGBT community considered?</h2>
+<label class="container" for="lgbt1">Completely equal as individuals with equal opportunity.<input type="radio" id="lgbt1" name="lgbt" value="lgbt1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="lgbt2">Socially accepted.<input type="radio" id="lgbt2" name="lgbt" value="lgbt2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="lgbt3">Registered and considered as different from other citizens.<input type="radio" id="lgbt3" name="lgbt" value="lgbt3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="lgbt4">Discriminated against.<input type="radio" id="lgbt4" name="lgbt" value="lgbt4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="lgbt5">Unacceptable and penalised or outlawed.<input type="radio" id="lgbt5" name="lgbt" value="lgbt5"><span class="checkmark"></span></label><br>
+<br>
+<h2>39. Who authorizes body integrity (freedom of movement)?</h2>
+<label class="container" for="body1">The state.<input type="radio" id="body1" name="body" value="body1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="body2">The state in case of national emergency or epidemics.<input type="radio" id="body2" name="body" value="body2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="body3">Privately certified organisations and institutions (by appointment).<input type="radio" id="body3" name="body" value="body3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="body4">Privately certified organisations and institutions (by election).<input type="radio" id="body4" name="body" value="body4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="body5">Individual citizens decide independently.<input type="radio" id="body5" name="body" value="body5"><span class="checkmark"></span></label><br>
+<br>
+<h2>40. What are your views on euthanasia?</h2>
+<label class="container" for="euth1">Euthanasia in all cases is illegal.<input type="radio" id="euth1" name="euth" value="euth1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="euth2">Passive euthanasia is legal.<input type="radio" id="euth2" name="euth" value="euth2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="euth3">Assisted euthanasia is legal.<input type="radio" id="euth3" name="euth" value="euth3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="euth4">Euthanasia in case of mental disorder is legal.<input type="radio" id="euth4" name="euth" value="euth4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="euth5">Voluntary euthanasia is legal.<input type="radio" id="euth5" name="euth" value="euth5"><span class="checkmark"></span></label><br>
+<br>
+<h2>41. What is the government's approach to securing desired changes policy?</h2>
+<label class="container" for="chang1">Allow a gradual evolution or organic change.<input type="radio" id="chang1" name="chang" value="chang1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="chang2">Use a form of propoganda to advocate for change.<input type="radio" id="chang2" name="chang" value="chang2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="chang3">Make laws that reduce hinders in favour of change (no criminalization of opposition).<input type="radio" id="chang3" name="chang" value="chang3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="chang4">Make laws that reduce hinders in favour of change (including criminalization of opposition).<input type="radio" id="chang4" name="chang" value="chang4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="chang5">Erase or remove all opponents of change to accelerate.<input type="radio" id="chang5" name="chang" value="chang5"><span class="checkmark"></span></label><br>
+<br>
+ <h2>42. What should the relationship between corporations and the government be?</h2>
+<label class="container" for="corp1">Corporations don't exist as the government owns all labour.<input type="radio" id="corp1" name="corp" value="corp1"><span class="checkmark"></span></label><br>
+
+<label class="container" for="corp2">The government controls all corporations.<input type="radio" id="corp2" name="corp" value="corp2"><span class="checkmark"></span></label><br>
+
+<label class="container" for="corp3">The government can decide policies of corporations, such as a minimum wage.<input type="radio" id="corp3" name="corp" value="corp3"><span class="checkmark"></span></label><br>
+
+<label class="container" for="corp4">Corporations can lobby, while the government can subsidize.<input type="radio" id="corp4" name="corp" value="corp4"><span class="checkmark"></span></label><br>
+
+<label class="container" for="corp5">They're (almost) completely seperated, lobbying or subsidizing is not possible.<input type="radio" id="corp5" name="corp" value="corp5"><span class="checkmark"></span></label><br>
+<br>
+<div class="submitter">
+<input class="button" type="submit" value="Submit">
+</div>
+</form>
 </body>
 </html>
