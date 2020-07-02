@@ -9,7 +9,7 @@
  }
 h1 {
 color: white;
-text-align: center;
+text-align: center;a
 font: 100px "Times New Roman", Times, serif;
 font-style: italic;
 }
@@ -20,34 +20,6 @@ font-family: "Comic Sans MS", sans-serif;
 }
 .octagon{
 position: relative;
-}
-.polscale{
-position: absolute;
-top: 0px;
-left: 0px;
-height: 20px;
-width: 20px;
-}
-.ecoscale{
-position: absolute;
-top: 0px;
-left: 0px;
-height: 20px;
-width: 20px;
-}
-.idenscale{
-position: absolute;
-top: 0px;
-left: 0px;
-height: 20px;
-width: 20px;
-}
-.socscale{
-position: absolute;
-top: 0px;
-left: 0px;
-height: 20px;
-width: 20px;
 }
 .one{
 position: absolute;
@@ -157,10 +129,6 @@ width: 20px;
 <p id="join2"></p>
  <div style="position: relative; display: block;">
     <img src="https://files.catbox.moe/wsctut.png" class="octagon"/>
-    <img src="https://files.catbox.moe/wro1gv.png" class="idenscale"/>	
-    <img src="https://files.catbox.moe/wro1gv.png" class="polscale"/>	
-    <img src="https://files.catbox.moe/wro1gv.png" class="ecoscale"/>	
-    <img src="https://files.catbox.moe/wro1gv.png" class="socscale"/>
     <img src="https://files.catbox.moe/hzyo43.png" class="one"/>
     <img src="https://files.catbox.moe/tgiy90.png" class="two"/>
     <img src="https://files.catbox.moe/tgiy90.png" class="three"/>
@@ -1572,8 +1540,8 @@ if (getUrlVars()["pris"] === "pris1") {
   ideology.iden = ideology.iden + 0;
 }
 ideology.polfree = ideology.polfree/31
-ideology.ecofree = ideology.ecofree/10
-ideology.socfree = ideology.socfree/25
+ideology.ecofree = ideology.ecofree/12
+ideology.socfree = ideology.socfree/28
 ideology.iden = ideology.iden/15
 var leftist = 100-(ideology.polfree+ideology.ecofree+ideology.socfree+ideology.iden)/4;
 var rightist = (ideology.polfree+ideology.ecofree+ideology.socfree+ideology.iden)/4;
@@ -1581,29 +1549,21 @@ document.getElementById("join").innerHTML = "You are approximately " + leftist.t
 var martop=35+6.45*ideology.polfree.toFixed(0);
 var marleft=815+2.68*ideology.polfree.toFixed(0)-500;
 var martoptwo=35+6.45*ideology.polfree.toFixed(0)+885;
-document.querySelector(".polscale").style.marginTop = martop+'px';
-document.querySelector(".polscale").style.marginLeft = marleft+'px';
 document.querySelector(".polscale2").style.marginTop = martoptwo+'px';
 document.querySelector(".polscale2").style.marginLeft = marleft+'px';
 var martop=490-2.65*ideology.ecofree.toFixed(0);
 var marleft=627+6.43*ideology.ecofree.toFixed(0)-500;
 var martoptwo=490-2.65*ideology.ecofree.toFixed(0)+885;
-document.querySelector(".ecoscale").style.marginTop = martop+'px';
-document.querySelector(".ecoscale").style.marginLeft = marleft+'px';
 document.querySelector(".ecoscale2").style.marginTop = martoptwo+'px';
 document.querySelector(".ecoscale2").style.marginLeft = marleft+'px';
 var martop=225+2.65*ideology.socfree.toFixed(0);
 var marleft=627+6.43*ideology.socfree.toFixed(0)-500;
 var martoptwo=225+2.65*ideology.socfree.toFixed(0)+885;
-document.querySelector(".socscale").style.marginTop = martop+'px';
-document.querySelector(".socscale").style.marginLeft = marleft+'px';
 document.querySelector(".socscale2").style.marginTop = martoptwo+'px';
 document.querySelector(".socscale2").style.marginLeft = marleft+'px';
 var martop=680-6.45*ideology.iden.toFixed(0);
 var marleft=815+2.68*ideology.iden.toFixed(0)-500;
 var martoptwo=680-6.45*ideology.iden.toFixed(0)+885;
-document.querySelector(".idenscale").style.marginTop = martop+'px';
-document.querySelector(".idenscale").style.marginLeft = marleft+'px';
 document.querySelector(".idenscale2").style.marginTop = martoptwo+'px';
 document.querySelector(".idenscale2").style.marginLeft = marleft+'px';
 return ideology;
