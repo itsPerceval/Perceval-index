@@ -1481,7 +1481,37 @@ if (getUrlVars()["pris"] === "pris1") {
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-ideology.polfree = ideology.polfree/30
+        if (getUrlVars()["voic"] === "voic1") {
+  ideology.polfree = ideology.polfree + 100;
+  ideology.ecofree = ideology.ecofree + 0;
+  ideology.socfree = ideology.socfree + 0;
+  ideology.iden = ideology.iden + 0;
+}
+     if (getUrlVars()["voic"] === "voic2") {
+  ideology.polfree = ideology.polfree + 75;
+  ideology.ecofree = ideology.ecofree + 0;
+  ideology.socfree = ideology.socfree + 0;
+  ideology.iden = ideology.iden + 0;
+}
+     if (getUrlVars()["voic"] === "voic3") {
+  ideology.polfree = ideology.polfree + 50;
+  ideology.ecofree = ideology.ecofree + 0;
+  ideology.socfree = ideology.socfree + 0;
+  ideology.iden = ideology.iden + 0;
+}
+  if (getUrlVars()["voic"] === "voic4") {
+  ideology.polfree = ideology.polfree + 25;
+  ideology.ecofree = ideology.ecofree + 0;
+  ideology.socfree = ideology.socfree + 0;
+  ideology.iden = ideology.iden + 0;
+}
+  if (getUrlVars()["voic"] === "voic5") {
+  ideology.polfree = ideology.polfree + 0;
+  ideology.ecofree = ideology.ecofree + 0;
+  ideology.socfree = ideology.socfree + 0;
+  ideology.iden = ideology.iden + 0;
+}
+ideology.polfree = ideology.polfree/31
 ideology.ecofree = ideology.ecofree/10
 ideology.socfree = ideology.socfree/25
 ideology.iden = ideology.iden/15
