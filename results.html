@@ -1541,6 +1541,36 @@ if (getUrlVars()["pris"] === "pris1") {
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
   }
+if (getUrlVars()["cris"] === "cris1") {
+  ideology.polfree = ideology.polfree + 0;
+  ideology.ecofree = ideology.ecofree + 0;
+  ideology.socfree = ideology.socfree + 0;
+  ideology.iden = ideology.iden + 0;
+}
+     if (getUrlVars()["cris"] === "cris2") {
+  ideology.polfree = ideology.polfree + 25;
+  ideology.ecofree = ideology.ecofree + 0;
+  ideology.socfree = ideology.socfree + 0;
+  ideology.iden = ideology.iden + 25;
+}
+     if (getUrlVars()["cris"] === "cris3") {
+  ideology.polfree = ideology.polfree + 50;
+  ideology.ecofree = ideology.ecofree + 0;
+  ideology.socfree = ideology.socfree + 0;
+  ideology.iden = ideology.iden + 50;
+}
+  if (getUrlVars()["cris"] === "cris4") {
+  ideology.polfree = ideology.polfree + 75;
+  ideology.ecofree = ideology.ecofree + 0;
+  ideology.socfree = ideology.socfree + 0;
+  ideology.iden = ideology.iden + 75;
+}
+  if (getUrlVars()["cris"] === "cris5") {
+  ideology.polfree = ideology.polfree + 100;
+  ideology.ecofree = ideology.ecofree + 0;
+  ideology.socfree = ideology.socfree + 0;
+  ideology.iden = ideology.iden + 100;
+}
         if (getUrlVars()["voic"] === "voic1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
@@ -1571,10 +1601,10 @@ if (getUrlVars()["pris"] === "pris1") {
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-ideology.polfree = ideology.polfree/32
+ideology.polfree = ideology.polfree/33
 ideology.ecofree = ideology.ecofree/12
 ideology.socfree = ideology.socfree/29
-ideology.iden = ideology.iden/16
+ideology.iden = ideology.iden/17
 var leftist = 100-(ideology.polfree+ideology.ecofree+ideology.socfree+ideology.iden)/4;
 var rightist = (ideology.polfree+ideology.ecofree+ideology.socfree+ideology.iden)/4;
 document.getElementById("join").innerHTML = "You are approximately " + leftist.toFixed(2) + "% left-wing, and therefore " + rightist.toFixed(2) + "% right-wing.<br >" + ideology.polfree.toFixed(0) + " political freedom index (naturalism vs statism)<br >" + ideology.ecofree.toFixed(0) + " economical freedom index (free marketism vs centralism)<br >" + ideology.socfree.toFixed(0) + " social freedom index (individualism vs collectivism)<br >" + ideology.iden.toFixed(0) + " identity index (localism vs globalism)<br >";
