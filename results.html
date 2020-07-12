@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
 <title>Results</title>
 <style>
- body {
- background-color: rgb(23, 64, 77);
- }
+body {
+background-color: rgb(23, 64, 77);
+}
 h1 {
-	color: white;
- 	text-align: center;
-	font: 100px "Times New Roman", Times, serif;
-	font-style: italic;
+color: white;
+text-align: center;
+font: 100px "Times New Roman", Times, serif;
+font-style: italic;
 }
 p{
 color: white;
@@ -57,28 +56,28 @@ left: 0px;
 height: 20px;
 width: 20px;
 }
-.polscale2{
+.polscale{
 position: absolute;
 top: 0px;
 left: 0px;
 height: 20px;
 width: 20px;
 }
-.ecoscale2{
+.ecoscale{
 position: absolute;
 top: 0px;
 left: 0px;
 height: 20px;
 width: 20px;
 }
-.socscale2{
+.socscale{
 position: absolute;
 top: 0px;
 left: 0px;
 height: 20px;
 width: 20px;
 }
-.idenscale2{
+.idenscale{
 position: absolute;
 top: 0px;
 left: 0px;
@@ -127,27 +126,27 @@ width: 15px;
 <h1>Your results:</h1>
 <p id="join"></p>
 <p id="join2"></p>
- <div style="position: relative; display: block;">
-    <img src="https://files.catbox.moe/iep0la.png" class="octagon"/>
-    <img src="https://files.catbox.moe/hzyo43.png" class="one"/>
-    <img src="https://files.catbox.moe/tgiy90.png" class="two"/>
-    <img src="https://files.catbox.moe/tgiy90.png" class="three"/>
-    <img src="https://files.catbox.moe/tgiy90.png" class="four"/>
-    <img src="https://files.catbox.moe/tgiy90.png" class="five"/>
-    <p>Explanation of the dots:<br>The red dot shows the ideology that is closest to your personal beliefs.<br>The black dots show your second to fifth closest ideologies.<br>The white dots strictly show your index on each scale.<br>The political segments of the octagon are as follows:</p>
-     </div>
-  <div style="position: relative; display: block;">
-    <img src="https://files.catbox.moe/a1ikaw.png" class="octagon"/>
-    <img src="https://files.catbox.moe/wro1gv.png" class="polscale2"/>
-    <img src="https://files.catbox.moe/wro1gv.png" class="ecoscale2"/>
-    <img src="https://files.catbox.moe/wro1gv.png" class="socscale2"/>
-    <img src="https://files.catbox.moe/wro1gv.png" class="idenscale2"/>
-    <img src="https://files.catbox.moe/hzyo43.png" class="one2"/>
-    <img src="https://files.catbox.moe/tgiy90.png" class="two2"/>
-    <img src="https://files.catbox.moe/tgiy90.png" class="three2"/>
-    <img src="https://files.catbox.moe/tgiy90.png" class="four2"/>
-    <img src="https://files.catbox.moe/tgiy90.png" class="five2"/>
- </div>
+<div style="position: relative; display: block;">
+<img src="https://files.catbox.moe/iep0la.png" class="octagon"/>
+<img src="https://files.catbox.moe/hzyo43.png" class="one"/>
+<img src="https://files.catbox.moe/tgiy90.png" class="two"/>
+<img src="https://files.catbox.moe/tgiy90.png" class="three"/>
+<img src="https://files.catbox.moe/tgiy90.png" class="four"/>
+<img src="https://files.catbox.moe/tgiy90.png" class="five"/>
+<p>Explanation of the dots:<br>The red dot shows the ideology that is closest to your personal beliefs.<br>The black dots show your second to fifth closest ideologies.<br>The white dots strictly show your index on each scale.<br>The political segments of the octagon are as follows:</p>
+</div>
+<div style="position: relative; display: block;">
+<img src="https://files.catbox.moe/a1ikaw.png" class="octagon"/>
+<img src="https://files.catbox.moe/wro1gv.png" class="polscale"/>
+<img src="https://files.catbox.moe/wro1gv.png" class="ecoscale"/>
+<img src="https://files.catbox.moe/wro1gv.png" class="socscale"/>
+<img src="https://files.catbox.moe/wro1gv.png" class="idenscale"/>
+<img src="https://files.catbox.moe/hzyo43.png" class="one2"/>
+<img src="https://files.catbox.moe/tgiy90.png" class="two2"/>
+<img src="https://files.catbox.moe/tgiy90.png" class="three2"/>
+<img src="https://files.catbox.moe/tgiy90.png" class="four2"/>
+<img src="https://files.catbox.moe/tgiy90.png" class="five2"/>
+</div>
 <script>
 function getUrlVars() {
 var vars = [], hash;
@@ -161,1531 +160,1531 @@ return vars;
 }
 function calculating(){
 var ideology = {polfree: 0, ecofree: 0, socfree: 0, iden: 0};
-if (getUrlVars()["size"] === "size1") {
+if (getUrlVars()["size"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["size"] === "size2") {
+if (getUrlVars()["size"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 25;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["size"] === "size3") {
+if (getUrlVars()["size"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 50;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["size"] === "size4") {
+if (getUrlVars()["size"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 75;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["size"] === "size5") {
+if (getUrlVars()["size"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 100;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["drugs"] === "drugs1") {
+if (getUrlVars()["drugs"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["drugs"] === "drugs2") {
+if (getUrlVars()["drugs"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["drugs"] === "drugs3") {
+if (getUrlVars()["drugs"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["drugs"] === "drugs4") {
+if (getUrlVars()["drugs"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["drugs"] === "drugs5") {
+if (getUrlVars()["drugs"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["guns"] === "guns1") {
+if (getUrlVars()["guns"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["guns"] === "guns2") {
+if (getUrlVars()["guns"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["guns"] === "guns3") {
+if (getUrlVars()["guns"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["guns"] === "guns4") {
+if (getUrlVars()["guns"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["guns"] === "guns5") {
+if (getUrlVars()["guns"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["eco"] === "eco1") {
+if (getUrlVars()["eco"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["eco"] === "eco2") {
+if (getUrlVars()["eco"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 25;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["eco"] === "eco3") {
+if (getUrlVars()["eco"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 50;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["eco"] === "eco4") {
+if (getUrlVars()["eco"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 75;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["eco"] === "eco5") {
+if (getUrlVars()["eco"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 100;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["elec"] === "elec1") {
+if (getUrlVars()["elec"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["elec"] === "elec2") {
+if (getUrlVars()["elec"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["elec"] === "elec3") {
+if (getUrlVars()["elec"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["elec"] === "elec4") {
+if (getUrlVars()["elec"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["elec"] === "elec5") {
+if (getUrlVars()["elec"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["immi"] === "immi1") {
+if (getUrlVars()["immi"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
 }
-if (getUrlVars()["immi"] === "immi2") {
+if (getUrlVars()["immi"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 75;
 }
-if (getUrlVars()["immi"] === "immi3") {
+if (getUrlVars()["immi"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 50;
 }
-if (getUrlVars()["immi"] === "immi4") {
+if (getUrlVars()["immi"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 25
 }
-if (getUrlVars()["immi"] === "immi5") {
+if (getUrlVars()["immi"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["abor"] === "abor1") {
+if (getUrlVars()["abor"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["abor"] === "abor2") {
+if (getUrlVars()["abor"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["abor"] === "abor3") {
+if (getUrlVars()["abor"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["abor"] === "abor4") {
+if (getUrlVars()["abor"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["abor"] === "abor5") {
+if (getUrlVars()["abor"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["tran"] === "tran1") {
+if (getUrlVars()["tran"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 100;
 }
-if (getUrlVars()["tran"] === "tran2") {
+if (getUrlVars()["tran"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 75;
 }
-if (getUrlVars()["tran"] === "tran3") {
+if (getUrlVars()["tran"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 50;
 }
-if (getUrlVars()["tran"] === "tran4") {
+if (getUrlVars()["tran"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 25;
 }
-if (getUrlVars()["tran"] === "tran5") {
+if (getUrlVars()["tran"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["nat"] === "nat1") {
+if (getUrlVars()["nat"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
 }
-if (getUrlVars()["nat"] === "nat2") {
+if (getUrlVars()["nat"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 75;
 }
-if (getUrlVars()["nat"] === "nat3") {
+if (getUrlVars()["nat"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 50;
 }
-if (getUrlVars()["nat"] === "nat4") {
+if (getUrlVars()["nat"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 25;
 }
-if (getUrlVars()["nat"] === "nat5") {
+if (getUrlVars()["nat"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["cont"] === "cont1") {
+if (getUrlVars()["cont"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["cont"] === "cont2") {
+if (getUrlVars()["cont"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["cont"] === "cont3") {
+if (getUrlVars()["cont"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["cont"] === "cont4") {
+if (getUrlVars()["cont"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["cont"] === "cont5") {
+if (getUrlVars()["cont"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["prov"] === "prov1") {
+if (getUrlVars()["prov"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 100;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["prov"] === "prov2") {
+if (getUrlVars()["prov"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 75;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["prov"] === "prov3") {
+if (getUrlVars()["prov"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 50;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["prov"] === "prov4") {
+if (getUrlVars()["prov"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 25;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["prov"] === "prov5") {
+if (getUrlVars()["prov"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["rel"] === "rel1") {
+if (getUrlVars()["rel"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-if (getUrlVars()["rel"] === "rel2") {
+if (getUrlVars()["rel"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 25;
 }
-if (getUrlVars()["rel"] === "rel3") {
+if (getUrlVars()["rel"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 50;
 }
-if (getUrlVars()["rel"] === "rel4") {
+if (getUrlVars()["rel"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 75;
 }
-if (getUrlVars()["rel"] === "rel5") {
+if (getUrlVars()["rel"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
 }
-if (getUrlVars()["pris"] === "pris1") {
+if (getUrlVars()["pris"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
- if (getUrlVars()["pris"] === "pris2") {
+ if (getUrlVars()["pris"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
- if (getUrlVars()["pris"] === "pris3") {
+ if (getUrlVars()["pris"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
- if (getUrlVars()["pris"] === "pris4") {
+ if (getUrlVars()["pris"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
- if (getUrlVars()["pris"] === "pris5") {
+ if (getUrlVars()["pris"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
- if (getUrlVars()["terri"] === "terri1") {
+ if (getUrlVars()["terri"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["terri"] === "terri2") {
+  if (getUrlVars()["terri"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 25;
 }
-  if (getUrlVars()["terri"] === "terri3") {
+  if (getUrlVars()["terri"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 50;
 }
-  if (getUrlVars()["terri"] === "terri4") {
+  if (getUrlVars()["terri"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 75;
 }
-  if (getUrlVars()["terri"] === "terri5") {
+  if (getUrlVars()["terri"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
 }
-  if (getUrlVars()["stan"] === "stan1") {
+  if (getUrlVars()["stan"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-   if (getUrlVars()["stan"] === "stan2") {
+   if (getUrlVars()["stan"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-   if (getUrlVars()["stan"] === "stan3") {
+   if (getUrlVars()["stan"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["stan"] === "stan4") {
+  if (getUrlVars()["stan"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-   if (getUrlVars()["stan"] === "stan5") {
+   if (getUrlVars()["stan"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["prod"] === "prod1") {
+  if (getUrlVars()["prod"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-   if (getUrlVars()["prod"] === "prod2") {
+   if (getUrlVars()["prod"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 25;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-   if (getUrlVars()["prod"] === "prod3") {
+   if (getUrlVars()["prod"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 50;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["prod"] === "prod4") {
+  if (getUrlVars()["prod"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 75;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-   if (getUrlVars()["prod"] === "prod5") {
+   if (getUrlVars()["prod"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 100;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 } 
-    if (getUrlVars()["fut"] === "fut1") {
+    if (getUrlVars()["fut"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-    if (getUrlVars()["fut"] === "fut2") {
+    if (getUrlVars()["fut"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 25;
 }
-    if (getUrlVars()["fut"] === "fut3") {
+    if (getUrlVars()["fut"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 50;
 }
-    if (getUrlVars()["fut"] === "fut4") {
+    if (getUrlVars()["fut"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 75;
 }
-    if (getUrlVars()["fut"] === "fut5") {
+    if (getUrlVars()["fut"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 100;
 }
-    if (getUrlVars()["str"] === "str1") {
+    if (getUrlVars()["str"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["str"] === "str2") {
+     if (getUrlVars()["str"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["str"] === "str3") {
+     if (getUrlVars()["str"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["str"] === "str4") {
+     if (getUrlVars()["str"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["str"] === "str5") {
+     if (getUrlVars()["str"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["nati"] === "nati1") {
+     if (getUrlVars()["nati"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
 }
-     if (getUrlVars()["nati"] === "nati2") {
+     if (getUrlVars()["nati"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 75;
 }
-     if (getUrlVars()["nati"] === "nati3") {
+     if (getUrlVars()["nati"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 50;
 }
-     if (getUrlVars()["nati"] === "nati4") {
+     if (getUrlVars()["nati"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 25;
 }
-     if (getUrlVars()["nati"] === "nati5") {
+     if (getUrlVars()["nati"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["jud"] === "jud1") {
+     if (getUrlVars()["jud"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["jud"] === "jud2") {
+     if (getUrlVars()["jud"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["jud"] === "jud3") {
+     if (getUrlVars()["jud"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["jud"] === "jud4") {
+     if (getUrlVars()["jud"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["jud"] === "jud5") {
+     if (getUrlVars()["jud"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["adop"] === "adop1") {
+     if (getUrlVars()["adop"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 100;
 }
-     if (getUrlVars()["adop"] === "adop2") {
+     if (getUrlVars()["adop"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 75;
 }
-     if (getUrlVars()["adop"] === "adop3") {
+     if (getUrlVars()["adop"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 50;
 }
-     if (getUrlVars()["adop"] === "adop4") {
+     if (getUrlVars()["adop"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 25;
 }
-     if (getUrlVars()["adop"] === "adop5") {
+     if (getUrlVars()["adop"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["cur"] === "cur1") {
+     if (getUrlVars()["cur"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["cur"] === "cur2") {
+     if (getUrlVars()["cur"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 25;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["cur"] === "cur3") {
+     if (getUrlVars()["cur"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 50;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["cur"] === "cur4") {
+     if (getUrlVars()["cur"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 75;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["cur"] === "cur5") {
+     if (getUrlVars()["cur"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 100;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["resp"] === "resp1") {
+     if (getUrlVars()["resp"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["resp"] === "resp2") {
+     if (getUrlVars()["resp"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["resp"] === "resp3") {
+     if (getUrlVars()["resp"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["resp"] === "resp4") {
+     if (getUrlVars()["resp"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["resp"] === "resp5") {
+     if (getUrlVars()["resp"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["cons"] === "cons1") {
+     if (getUrlVars()["cons"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["cons"] === "cons2") {
+     if (getUrlVars()["cons"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["cons"] === "cons3") {
+     if (getUrlVars()["cons"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["cons"] === "cons4") {
+     if (getUrlVars()["cons"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["cons"] === "cons5") {
+     if (getUrlVars()["cons"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["mult"] === "mult1") {
+     if (getUrlVars()["mult"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
 }
-     if (getUrlVars()["mult"] === "mult2") {
+     if (getUrlVars()["mult"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 75;
 }
-     if (getUrlVars()["mult"] === "mult3") {
+     if (getUrlVars()["mult"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 50;
 }
-     if (getUrlVars()["mult"] === "mult4") {
+     if (getUrlVars()["mult"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 25;
 }
-     if (getUrlVars()["mult"] === "mult5") {
+     if (getUrlVars()["mult"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["pun"] === "pun1") {
+     if (getUrlVars()["pun"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["pun"] === "pun2") {
+     if (getUrlVars()["pun"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["pun"] === "pun3") {
+     if (getUrlVars()["pun"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["pun"] === "pun4") {
+     if (getUrlVars()["pun"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["pun"] === "pun5") {
+     if (getUrlVars()["pun"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["cul"] === "cul1") {
+     if (getUrlVars()["cul"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["cul"] === "cul2") {
+     if (getUrlVars()["cul"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 25;
 }
-     if (getUrlVars()["cul"] === "cul3") {
+     if (getUrlVars()["cul"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 50;
 }
-     if (getUrlVars()["cul"] === "cul4") {
+     if (getUrlVars()["cul"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 75;
 }
-     if (getUrlVars()["cul"] === "cul5") {
+     if (getUrlVars()["cul"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
 }
-     if (getUrlVars()["asp"] === "asp1") {
+     if (getUrlVars()["asp"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
 }
-     if (getUrlVars()["asp"] === "asp2") {
+     if (getUrlVars()["asp"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 75;
 }
-     if (getUrlVars()["asp"] === "asp3") {
+     if (getUrlVars()["asp"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 50;
 }
-     if (getUrlVars()["asp"] === "asp4") {
+     if (getUrlVars()["asp"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 25;
 }
-     if (getUrlVars()["asp"] === "asp5") {
+     if (getUrlVars()["asp"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["degr"] === "degr1") {
+     if (getUrlVars()["degr"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
 }
-     if (getUrlVars()["degr"] === "degr2") {
+     if (getUrlVars()["degr"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 25;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 75;
 }
-     if (getUrlVars()["degr"] === "degr3") {
+     if (getUrlVars()["degr"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 50;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 50;
 }
-     if (getUrlVars()["degr"] === "degr4") {
+     if (getUrlVars()["degr"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 75;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 25;
 }
-     if (getUrlVars()["degr"] === "degr5") {
+     if (getUrlVars()["degr"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 100;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["soci"] === "soci1") {
+     if (getUrlVars()["soci"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["soci"] === "soci2") {
+     if (getUrlVars()["soci"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["soci"] === "soci3") {
+     if (getUrlVars()["soci"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["soci"] === "soci4") {
+     if (getUrlVars()["soci"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["soci"] === "soci5") {
+     if (getUrlVars()["soci"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["prot"] === "prot1") {
+     if (getUrlVars()["prot"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["prot"] === "prot2") {
+     if (getUrlVars()["prot"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["prot"] === "prot3") {
+     if (getUrlVars()["prot"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["prot"] === "prot4") {
+     if (getUrlVars()["prot"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["prot"] === "prot5") {
+     if (getUrlVars()["prot"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["goal"] === "goal1") {
+     if (getUrlVars()["goal"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["goal"] === "goal2") {
+     if (getUrlVars()["goal"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 25;
 }
-     if (getUrlVars()["goal"] === "goal3") {
+     if (getUrlVars()["goal"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 50;
 }
-     if (getUrlVars()["goal"] === "goal4") {
+     if (getUrlVars()["goal"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 75;
 }
-     if (getUrlVars()["goal"] === "goal5") {
+     if (getUrlVars()["goal"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
 }
-     if (getUrlVars()["spac"] === "spac1") {
+     if (getUrlVars()["spac"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
 }
-     if (getUrlVars()["spac"] === "spac2") {
+     if (getUrlVars()["spac"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 75;
 }
-     if (getUrlVars()["spac"] === "spac3") {
+     if (getUrlVars()["spac"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 50;
 }
-     if (getUrlVars()["spac"] === "spac4") {
+     if (getUrlVars()["spac"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 25;
 }
-     if (getUrlVars()["spac"] === "spac5") {
+     if (getUrlVars()["spac"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["welf"] === "welf1") {
+     if (getUrlVars()["welf"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 100;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["welf"] === "welf2") {
+     if (getUrlVars()["welf"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 75;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["welf"] === "welf3") {
+     if (getUrlVars()["welf"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 50;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["welf"] === "welf4") {
+     if (getUrlVars()["welf"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 25;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["welf"] === "welf5") {
+     if (getUrlVars()["welf"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["race"] === "race1") {
+     if (getUrlVars()["race"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 100;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["race"] === "race2") {
+     if (getUrlVars()["race"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 75;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["race"] === "race3") {
+     if (getUrlVars()["race"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 50;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["race"] === "race4") {
+     if (getUrlVars()["race"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 25;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["race"] === "race5") {
+     if (getUrlVars()["race"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["regu"] === "regu1") {
+     if (getUrlVars()["regu"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["regu"] === "regu2") {
+     if (getUrlVars()["regu"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 25;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["regu"] === "regu3") {
+     if (getUrlVars()["regu"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 50;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["regu"] === "regu4") {
+     if (getUrlVars()["regu"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 75;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["regu"] === "regu5") {
+     if (getUrlVars()["regu"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 100;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["id"] === "id1") {
+     if (getUrlVars()["id"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["id"] === "id2") {
+     if (getUrlVars()["id"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["id"] === "id3") {
+     if (getUrlVars()["id"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["id"] === "id4") {
+     if (getUrlVars()["id"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["id"] === "id5") {
+     if (getUrlVars()["id"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["hist"] === "hist1") {
+     if (getUrlVars()["hist"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["hist"] === "hist2") {
+     if (getUrlVars()["hist"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 25;
 }
-     if (getUrlVars()["hist"] === "hist3") {
+     if (getUrlVars()["hist"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 50;
 }
-     if (getUrlVars()["hist"] === "hist4") {
+     if (getUrlVars()["hist"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 75;
 }
-     if (getUrlVars()["hist"] === "hist5") {
+     if (getUrlVars()["hist"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
 }
-     if (getUrlVars()["lgbt"] === "lgbt1") {
+     if (getUrlVars()["lgbt"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["lgbt"] === "lgbt2") {
+     if (getUrlVars()["lgbt"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["lgbt"] === "lgbt3") {
+     if (getUrlVars()["lgbt"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["lgbt"] === "lgbt4") {
+     if (getUrlVars()["lgbt"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["lgbt"] === "lgbt5") {
+     if (getUrlVars()["lgbt"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["body"] === "body1") {
+     if (getUrlVars()["body"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["body"] === "body2") {
+     if (getUrlVars()["body"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["body"] === "body3") {
+     if (getUrlVars()["body"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["body"] === "body4") {
+     if (getUrlVars()["body"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["body"] === "body5") {
+     if (getUrlVars()["body"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["euth"] === "euth1") {
+     if (getUrlVars()["euth"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["euth"] === "euth2") {
+     if (getUrlVars()["euth"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["euth"] === "euth3") {
+     if (getUrlVars()["euth"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["euth"] === "euth4") {
+     if (getUrlVars()["euth"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["euth"] === "euth5") {
+     if (getUrlVars()["euth"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-      if (getUrlVars()["chang"] === "chang1") {
+      if (getUrlVars()["chang"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["chang"] === "chang2") {
+     if (getUrlVars()["chang"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["chang"] === "chang3") {
+     if (getUrlVars()["chang"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["chang"] === "chang4") {
+     if (getUrlVars()["chang"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["chang"] === "chang5") {
+     if (getUrlVars()["chang"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-       if (getUrlVars()["corp"] === "corp1") {
+       if (getUrlVars()["corp"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["corp"] === "corp2") {
+     if (getUrlVars()["corp"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 25;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["corp"] === "corp3") {
+     if (getUrlVars()["corp"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 50;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["corp"] === "corp4") {
+  if (getUrlVars()["corp"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 75;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["corp"] === "corp5") {
+  if (getUrlVars()["corp"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 100;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }	
-if (getUrlVars()["trai"] === "trai1") {
+if (getUrlVars()["trai"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
 }
-     if (getUrlVars()["trai"] === "trai2") {
+     if (getUrlVars()["trai"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 75;
 }
-     if (getUrlVars()["trai"] === "trai3") {
+     if (getUrlVars()["trai"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 50;
 }
-  if (getUrlVars()["trai"] === "trai4") {
+  if (getUrlVars()["trai"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 25;
 }
-  if (getUrlVars()["trai"] === "trai5") {
+  if (getUrlVars()["trai"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["prod"] === "prod1") {
+  if (getUrlVars()["prod"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["prod"] === "prod2") {
+     if (getUrlVars()["prod"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 25;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["prod"] === "prod3") {
+     if (getUrlVars()["prod"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 50;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["prod"] === "prod4") {
+  if (getUrlVars()["prod"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 75;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["prod"] === "prod5") {
+  if (getUrlVars()["prod"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 100;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
   }
-   if (getUrlVars()["tax"] === "tax1") {
+   if (getUrlVars()["tax"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 100;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["tax"] === "tax2") {
+     if (getUrlVars()["tax"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 75;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["tax"] === "tax3") {
+     if (getUrlVars()["tax"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 50;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["tax"] === "tax4") {
+  if (getUrlVars()["tax"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 25;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["tax"] === "tax5") {
+  if (getUrlVars()["tax"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
   }
-	  if (getUrlVars()["draft"] === "draft1") {
+	  if (getUrlVars()["draft"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["draft"] === "draft2") {
+     if (getUrlVars()["draft"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 25;
 }
-     if (getUrlVars()["draft"] === "draft3") {
+     if (getUrlVars()["draft"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 50;
 }
-  if (getUrlVars()["draft"] === "draft4") {
+  if (getUrlVars()["draft"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 75;
 }
-  if (getUrlVars()["draft"] === "draft5") {
+  if (getUrlVars()["draft"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
   }
-if (getUrlVars()["cris"] === "cris1") {
+if (getUrlVars()["cris"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["cris"] === "cris2") {
+     if (getUrlVars()["cris"] === "2") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 25;
 }
-     if (getUrlVars()["cris"] === "cris3") {
+     if (getUrlVars()["cris"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 50;
 }
-  if (getUrlVars()["cris"] === "cris4") {
+  if (getUrlVars()["cris"] === "4") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 75;
 }
-  if (getUrlVars()["cris"] === "cris5") {
+  if (getUrlVars()["cris"] === "5") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 100;
 }
-if (getUrlVars()["infl"] === "infl1") {
+if (getUrlVars()["infl"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["infl"] === "infl2") {
+     if (getUrlVars()["infl"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 25;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["infl"] === "infl3") {
+     if (getUrlVars()["infl"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 50;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["infl"] === "infl4") {
+  if (getUrlVars()["infl"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 75;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["infl"] === "infl5") {
+  if (getUrlVars()["infl"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 100;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-	if (getUrlVars()["overp"] === "overp1") {
+	if (getUrlVars()["overp"] === "1") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["overp"] === "overp2") {
+     if (getUrlVars()["overp"] === "2") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 25;
   ideology.socfree = ideology.socfree + 25;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["overp"] === "overp3") {
+     if (getUrlVars()["overp"] === "3") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 50;
   ideology.socfree = ideology.socfree + 50;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["overp"] === "overp4") {
+  if (getUrlVars()["overp"] === "4") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 75;
   ideology.socfree = ideology.socfree + 75;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["overp"] === "overp5") {
+  if (getUrlVars()["overp"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 100;
   ideology.socfree = ideology.socfree + 100;
   ideology.iden = ideology.iden + 0;
 }
-        if (getUrlVars()["voic"] === "voic1") {
+        if (getUrlVars()["voic"] === "1") {
   ideology.polfree = ideology.polfree + 100;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["voic"] === "voic2") {
+     if (getUrlVars()["voic"] === "2") {
   ideology.polfree = ideology.polfree + 75;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-     if (getUrlVars()["voic"] === "voic3") {
+     if (getUrlVars()["voic"] === "3") {
   ideology.polfree = ideology.polfree + 50;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["voic"] === "voic4") {
+  if (getUrlVars()["voic"] === "4") {
   ideology.polfree = ideology.polfree + 25;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
   ideology.iden = ideology.iden + 0;
 }
-  if (getUrlVars()["voic"] === "voic5") {
+  if (getUrlVars()["voic"] === "5") {
   ideology.polfree = ideology.polfree + 0;
   ideology.ecofree = ideology.ecofree + 0;
   ideology.socfree = ideology.socfree + 0;
@@ -1701,23 +1700,23 @@ document.getElementById("join").innerHTML = "You are approximately " + leftist.t
 var martop=35+6.45*ideology.polfree.toFixed(0);
 var marleft=815+2.68*ideology.polfree.toFixed(0)-500;
 var martoptwo=35+6.45*ideology.polfree.toFixed(0);
-document.querySelector(".polscale2").style.marginTop = martoptwo+'px';
-document.querySelector(".polscale2").style.marginLeft = marleft+'px';
+document.querySelector(".polscale").style.marginTop = martoptwo+'px';
+document.querySelector(".polscale").style.marginLeft = marleft+'px';
 var martop=490-2.65*ideology.ecofree.toFixed(0);
 var marleft=627+6.43*ideology.ecofree.toFixed(0)-500;
 var martoptwo=490-2.65*ideology.ecofree.toFixed(0);
-document.querySelector(".ecoscale2").style.marginTop = martoptwo+'px';
-document.querySelector(".ecoscale2").style.marginLeft = marleft+'px';
+document.querySelector(".ecoscale").style.marginTop = martoptwo+'px';
+document.querySelector(".ecoscale").style.marginLeft = marleft+'px';
 var martop=225+2.65*ideology.socfree.toFixed(0);
 var marleft=627+6.43*ideology.socfree.toFixed(0)-500;
 var martoptwo=225+2.65*ideology.socfree.toFixed(0);
-document.querySelector(".socscale2").style.marginTop = martoptwo+'px';
-document.querySelector(".socscale2").style.marginLeft = marleft+'px';
+document.querySelector(".socscale").style.marginTop = martoptwo+'px';
+document.querySelector(".socscale").style.marginLeft = marleft+'px';
 var martop=680-6.45*ideology.iden.toFixed(0);
 var marleft=815+2.68*ideology.iden.toFixed(0)-500;
 var martoptwo=680-6.45*ideology.iden.toFixed(0);
-document.querySelector(".idenscale2").style.marginTop = martoptwo+'px';
-document.querySelector(".idenscale2").style.marginLeft = marleft+'px';
+document.querySelector(".idenscale").style.marginTop = martoptwo+'px';
+document.querySelector(".idenscale").style.marginLeft = marleft+'px';
 return ideology;
 }
 function matching(){
