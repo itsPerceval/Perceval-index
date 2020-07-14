@@ -56,42 +56,6 @@ left: 0px;
 height: 20px;
 width: 20px;
 }
-.six{
-position: absolute;
-border:1px black;
-top: 0px;
-left: 0px;
-height: 20px;
-width: 20px;
-}
-.seven{
-position: absolute;
-top: 0px;
-left: 0px;
-height: 20px;
-width: 20px;
-}
-.eight{
-position: absolute;
-top: 0px;
-left: 0px;
-height: 20px;
-width: 20px;
-}
-.nine{
-position: absolute;
-top: 0px;
-left: 0px;
-height: 20px;
-width: 20px;
-}
-.ten{
-position: absolute;
-top: 0px;
-left: 0px;
-height: 20px;
-width: 20px;
-}
 .polscale{
 position: absolute;
 top: 0px;
@@ -155,43 +119,7 @@ top: 0px;
 left: 0px;
 height: 15px;
 width: 15px;
-}
-.six2{
-position: absolute;
-border:1px black;
-top: 0px;
-left: 0px;
-height: 15px;
-width: 15px;
-}
-.seven2{
-position: absolute;
-top: 0px;
-left: 0px;
-height: 15px;
-width: 15px;
-}
-.eight2{
-position: absolute;
-top: 0px;
-left: 0px;
-height: 15px;
-width: 15px;
-}
-.nine2{
-position: absolute;
-top: 0px;
-left: 0px;
-height: 15px;
-width: 15px;
-}
-.ten2{
-position: absolute;
-top: 0px;
-left: 0px;
-height: 15px;
-width: 15px;
-}   
+}    
 </style>
 </head>
 <body>
@@ -205,14 +133,7 @@ width: 15px;
 <img src="https://files.catbox.moe/tgiy90.png" class="three"/>
 <img src="https://files.catbox.moe/tgiy90.png" class="four"/>
 <img src="https://files.catbox.moe/tgiy90.png" class="five"/>
-<!--
-<img src="https://files.catbox.moe/z1hvmb.png" class="six"/>
-<img src="https://files.catbox.moe/z1hvmb.png" class="seven"/>
-<img src="https://files.catbox.moe/z1hvmb.png" class="eight"/>
-<img src="https://files.catbox.moe/z1hvmb.png" class="nine"/>
-<img src="https://files.catbox.moe/z1hvmb.png" class="ten"/>
--->
-<p>Explanation of the dots:<br>The red dot shows the ideology that is closest to your personal beliefs.<br>The black dots show your second to fifth closest ideologies.<br>The gray dots show your sixth to tenth closest ideologies.<br>The white dots strictly show your index on each scale.<br>The political segments of the octagon are as follows:</p>
+<p>Explanation of the dots:<br>The red dot shows the ideology that is closest to your personal beliefs.<br>The black dots show your second to fifth closest ideologies.<br>The white dots strictly show your index on each scale.<br>The political segments of the octagon are as follows:</p>
 </div>
 <div style="position: relative; display: block;">
 <img src="https://files.catbox.moe/6o2xb4.png" class="octagon"/>
@@ -225,13 +146,6 @@ width: 15px;
 <img src="https://files.catbox.moe/tgiy90.png" class="three2"/>
 <img src="https://files.catbox.moe/tgiy90.png" class="four2"/>
 <img src="https://files.catbox.moe/tgiy90.png" class="five2"/>
-<!--
-<img src="https://files.catbox.moe/z1hvmb.png" class="six2"/>
-<img src="https://files.catbox.moe/z1hvmb.png" class="seven2"/>
-<img src="https://files.catbox.moe/z1hvmb.png" class="eight2"/>
-<img src="https://files.catbox.moe/z1hvmb.png" class="nine2"/>
-<img src="https://files.catbox.moe/z1hvmb.png" class="ten2"/>
--->
 </div>
 <script>
 function getUrlVars() {
@@ -1857,7 +1771,7 @@ var ideologies = [{polfree: 85, ecofree: 100, socfree: 85, iden: 35, name: "Anar
 {polfree: 10, ecofree: 25, socfree: 25, iden: 90, name: "Military junta", xcor: 945, ycor: 35},
 {polfree: 20, ecofree: 25, socfree: 25, iden: 75, name: "Third international", xcor: 922, ycor: 80},
 {polfree: 25, ecofree: 35, socfree: 35, iden: 80, name: "Third position", xcor: 950, ycor: 132},
-{polfree: 40, ecofree: 50, socfree: 50, iden: 60, name: "Third way", xcor: 950, ycor: 242},
+{polfree: 20, ecofree: 50, socfree: 50, iden: 65, name: "Third way", xcor: 950, ycor: 242},
 {polfree: 25, ecofree: 50, socfree: 30, iden: 90, name: "Military republic", xcor: 1020, ycor: 35},
 {polfree: 30, ecofree: 50, socfree: 40, iden: 85, name: "Integralism", xcor: 1030, ycor: 80},
 {polfree: 30, ecofree: 60, socfree: 40, iden: 95, name: "Consitutional monarchy", xcor: 1080, ycor: 35},
@@ -1901,41 +1815,6 @@ percentages.sort(function(a, b){return b.percentage - a.percentage});
 return percentages;
 }
 var closest = matching();
-var margtop=closest[9].ycor;
-var margleft=closest[9].xcor-500;
-var margtoptwo=closest[9].ycor;
-document.querySelector(".ten").style.marginTop = margtop+'px';
-document.querySelector(".ten").style.marginLeft = margleft+'px';
-document.querySelector(".ten2").style.marginTop = margtoptwo+'px';
-document.querySelector(".ten2").style.marginLeft = margleft+'px';
-var margtop=closest[8].ycor;
-var margleft=closest[8].xcor-500;
-var margtoptwo=closest[8].ycor;
-document.querySelector(".nine").style.marginTop = margtop+'px';
-document.querySelector(".nine").style.marginLeft = margleft+'px';
-document.querySelector(".nine2").style.marginTop = margtoptwo+'px';
-document.querySelector(".nine2").style.marginLeft = margleft+'px';
-var margtop=closest[7].ycor;
-var margleft=closest[7].xcor-500;
-var margtoptwo=closest[7].ycor;
-document.querySelector(".eight").style.marginTop = margtop+'px';
-document.querySelector(".eight").style.marginLeft = margleft+'px';
-document.querySelector(".eight2").style.marginTop = margtoptwo+'px';
-document.querySelector(".eight2").style.marginLeft = margleft+'px';
-var margtop=closest[6].ycor;
-var margleft=closest[6].xcor-500;
-var margtoptwo=closest[6].ycor;
-document.querySelector(".seven").style.marginTop = margtop+'px';
-document.querySelector(".seven").style.marginLeft = margleft+'px';
-document.querySelector(".seven2").style.marginTop = margtoptwo+'px';
-document.querySelector(".seven2").style.marginLeft = margleft+'px';
-var margtop=closest[5].ycor;
-var margleft=closest[5].xcor-500;
-var margtoptwo=closest[5].ycor;
-document.querySelector(".six").style.marginTop = margtop+'px';
-document.querySelector(".six").style.marginLeft = margleft+'px';
-document.querySelector(".six2").style.marginTop = margtoptwo+'px';
-document.querySelector(".six2").style.marginLeft = margleft+'px';
 var margtop=closest[4].ycor;
 var margleft=closest[4].xcor-500;
 var margtoptwo=closest[4].ycor;
@@ -1972,7 +1851,7 @@ document.querySelector(".one").style.marginLeft = margleft+'px';
 document.querySelector(".one2").style.marginTop = margtoptwo+'px';
 document.querySelector(".one2").style.marginLeft = margleft+'px';
 document.getElementById("join2").innerHTML = "1. " + (closest[0].percentage*100).toFixed(2) + "% " + closest[0].name + "<br > 2. " + (closest[1].percentage*100).toFixed(2) + "% " + closest[1].name + "<br > 3. " + 
-(closest[2].percentage*100).toFixed(2) + "% " + closest[2].name + "<br > 4. " + (closest[3].percentage*100).toFixed(2) + "% " + closest[3].name + "<br > 5. " + (closest[4].percentage*100).toFixed(2) + "% " + closest[4].name + "<br > 6. " + (closest[5].percentage*100).toFixed(2) + "% " + closest[5].name + "<br > 7. " + (closest[6].percentage*100).toFixed(2) + "% " + closest[6].name + "<br > 8. " + (closest[7].percentage*100).toFixed(2) + "% " + closest[7].name + "<br > 9. " + (closest[8].percentage*100).toFixed(2) + "% " + closest[8].name + "<br > 10. " + (closest[9].percentage*100).toFixed(2) + "% " + closest[9].name + "<br >";
+(closest[2].percentage*100).toFixed(2) + "% " + closest[2].name + "<br > 4. " + (closest[3].percentage*100).toFixed(2) + "% " + closest[3].name + "<br > 5. " + (closest[4].percentage*100).toFixed(2) + "% " + closest[4].name + "<br >";
 </script>
 </body>
 </html>
